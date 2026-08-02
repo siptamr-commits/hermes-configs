@@ -4,12 +4,10 @@
   "configType": "ultra_aim_assist_with_aimlock",
   "lastUpdated": "2026-08-02",
   "author": "Hermes Team",
-
   "universalAimAssist": {
     "enabled": true,
     "masterStrength": 1.0,
     "mode": "ultra_aggressive",
-
     "targetSelection": {
       "primaryBone": "head",
       "secondaryBone": "chest",
@@ -24,7 +22,6 @@
       "priorityMode": "headshot_first",
       "stabilityThreshold": 0.1
     },
-
     "magnetSystem": {
       "enabled": true,
       "pullForce": 0.95,
@@ -42,7 +39,6 @@
       "maxPullSpeed": 5.0,
       "snapThreshold": 0.3
     },
-
     "antiJitterAndRecoil": {
       "antiJitterEnabled": true,
       "jitterSmoothing": 0.95,
@@ -57,7 +53,6 @@
       "horizontalRecoil": 0.75,
       "burstRecoil": 0.82
     },
-
     "predictionEngine": {
       "enabled": true,
       "pingCompensation": true,
@@ -73,7 +68,6 @@
       "dynamicPrediction": true,
       "trajectoryCalculation": "ballistic_arc"
     },
-
     "aimLock": {
       "enabled": true,
       "lockStrength": 0.98,
@@ -94,50 +88,116 @@
       "lockNeckFallback": true,
       "lockBodyAim": false,
       "lockLimbAim": false,
-
       "lockByDistance": {
-        "pointBlank": {"strength": 1.0, "speed": 0.02, "stickiness": 0.98},
-        "close": {"strength": 0.95, "speed": 0.03, "stickiness": 0.95},
-        "mid": {"strength": 0.85, "speed": 0.05, "stickiness": 0.90},
-        "long": {"strength": 0.70, "speed": 0.08, "stickiness": 0.85},
-        "extreme": {"strength": 0.50, "speed": 0.12, "stickiness": 0.80}
+        "pointBlank": {
+          "strength": 1.0,
+          "speed": 0.02,
+          "stickiness": 0.98
+        },
+        "close": {
+          "strength": 0.95,
+          "speed": 0.03,
+          "stickiness": 0.95
+        },
+        "mid": {
+          "strength": 0.85,
+          "speed": 0.05,
+          "stickiness": 0.9
+        },
+        "long": {
+          "strength": 0.7,
+          "speed": 0.08,
+          "stickiness": 0.85
+        },
+        "extreme": {
+          "strength": 0.5,
+          "speed": 0.12,
+          "stickiness": 0.8
+        }
       },
-
       "lockByWeapon": {
-        "assaultRifle": {"strength": 0.92, "speed": 0.04, "stickiness": 0.93},
-        "smg": {"strength": 0.95, "speed": 0.02, "stickiness": 0.96},
-        "sniper": {"strength": 0.70, "speed": 0.08, "stickiness": 0.85},
-        "shotgun": {"strength": 0.98, "speed": 0.01, "stickiness": 0.98},
-        "lmg": {"strength": 0.88, "speed": 0.05, "stickiness": 0.90},
-        "pistol": {"strength": 0.90, "speed": 0.03, "stickiness": 0.92},
-        "marksman": {"strength": 0.75, "speed": 0.07, "stickiness": 0.87}
+        "assaultRifle": {
+          "strength": 0.92,
+          "speed": 0.04,
+          "stickiness": 0.93
+        },
+        "smg": {
+          "strength": 0.95,
+          "speed": 0.02,
+          "stickiness": 0.96
+        },
+        "sniper": {
+          "strength": 0.7,
+          "speed": 0.08,
+          "stickiness": 0.85
+        },
+        "shotgun": {
+          "strength": 0.98,
+          "speed": 0.01,
+          "stickiness": 0.98
+        },
+        "lmg": {
+          "strength": 0.88,
+          "speed": 0.05,
+          "stickiness": 0.9
+        },
+        "pistol": {
+          "strength": 0.9,
+          "speed": 0.03,
+          "stickiness": 0.92
+        },
+        "marksman": {
+          "strength": 0.75,
+          "speed": 0.07,
+          "stickiness": 0.87
+        }
       },
-
       "lockByScope": {
-        "redDot": {"strength": 0.95, "speed": 0.03, "stickiness": 0.95},
-        "holographic": {"strength": 0.93, "speed": 0.03, "stickiness": 0.94},
-        "acog": {"strength": 0.88, "speed": 0.05, "stickiness": 0.92},
-        "sniperScope": {"strength": 0.70, "speed": 0.08, "stickiness": 0.85},
-        "thermal": {"strength": 0.90, "speed": 0.04, "stickiness": 0.93},
-        "noScope": {"strength": 0.98, "speed": 0.01, "stickiness": 0.98}
+        "redDot": {
+          "strength": 0.95,
+          "speed": 0.03,
+          "stickiness": 0.95
+        },
+        "holographic": {
+          "strength": 0.93,
+          "speed": 0.03,
+          "stickiness": 0.94
+        },
+        "acog": {
+          "strength": 0.88,
+          "speed": 0.05,
+          "stickiness": 0.92
+        },
+        "sniperScope": {
+          "strength": 0.7,
+          "speed": 0.08,
+          "stickiness": 0.85
+        },
+        "thermal": {
+          "strength": 0.9,
+          "speed": 0.04,
+          "stickiness": 0.93
+        },
+        "noScope": {
+          "strength": 0.98,
+          "speed": 0.01,
+          "stickiness": 0.98
+        }
       },
-
       "lockModes": {
         "softLock": {
           "enabled": true,
           "description": ".lock ظریف - قفل آروم ولی دقیق",
-          "strength": 0.70,
+          "strength": 0.7,
           "speed": 0.08,
-          "stickiness": 0.85,
-          "humanized": true
+          "stickiness": 0.85
         },
         "hardLock": {
           "enabled": true,
           "description": "قفل سخت - سریع و محکم",
           "strength": 0.95,
           "speed": 0.02,
-          "stickiness": 0.98,
-          "humanized": false
+          "stickiness": 0.98
         },
         "snapLock": {
           "enabled": true,
@@ -145,16 +205,14 @@
           "strength": 1.0,
           "speed": 0.01,
           "stickiness": 1.0,
-          "humanized": false,
           "snapDelay": 50
         },
         "stickyLock": {
           "enabled": true,
           "description": "قفل چسبناک - محکم نگه میداره",
-          "strength": 0.90,
+          "strength": 0.9,
           "speed": 0.04,
           "stickiness": 0.99,
-          "humanized": true,
           "breakThreshold": 0.3
         },
         "predictiveLock": {
@@ -163,20 +221,17 @@
           "strength": 0.85,
           "speed": 0.05,
           "stickiness": 0.92,
-          "humanized": true,
-          "predictionStrength": 0.90
+          "predictionStrength": 0.9
         },
         "assistedLock": {
           "enabled": true,
           "description": "قفل کمکی - فقط کمک می‌کنه نه قفل کامل",
-          "strength": 0.50,
-          "speed": 0.10,
-          "stickiness": 0.70,
-          "humanized": true,
+          "strength": 0.5,
+          "speed": 0.1,
+          "stickiness": 0.7,
           "assistOnly": true
         }
       },
-
       "lockBreakConditions": {
         "breakOnSmoke": false,
         "breakOnFlash": false,
@@ -194,7 +249,6 @@
         "breakOnWall": true,
         "breakOnObstacle": false
       },
-
       "lockAdvanced": {
         "adaptiveLock": true,
         "dynamicStrength": true,
@@ -214,11 +268,9 @@
       }
     }
   },
-
   "weaponProfiles": {
     "autoDetectWeapon": true,
     "switchDelay": 100,
-
     "assaultRifle": {
       "bulletSpeed": 920,
       "magnetRadius": 55,
@@ -239,7 +291,6 @@
         "mode": "hardLock"
       }
     },
-
     "smg": {
       "bulletSpeed": 650,
       "magnetRadius": 75,
@@ -260,7 +311,6 @@
         "mode": "snapLock"
       }
     },
-
     "sniper": {
       "bulletSpeed": 1350,
       "magnetRadius": 40,
@@ -277,7 +327,7 @@
       "recoilPattern": "minimal",
       "aimLock": {
         "enabled": true,
-        "strength": 0.70,
+        "strength": 0.7,
         "speed": 0.08,
         "stickiness": 0.85,
         "mode": "softLock",
@@ -285,7 +335,6 @@
         "hardScopeLock": true
       }
     },
-
     "shotgun": {
       "bulletSpeed": 500,
       "magnetRadius": 95,
@@ -306,7 +355,6 @@
         "mode": "snapLock"
       }
     },
-
     "lmg": {
       "bulletSpeed": 860,
       "magnetRadius": 60,
@@ -323,11 +371,10 @@
         "enabled": true,
         "strength": 0.88,
         "speed": 0.05,
-        "stickiness": 0.90,
+        "stickiness": 0.9,
         "mode": "hardLock"
       }
     },
-
     "pistol": {
       "bulletSpeed": 550,
       "magnetRadius": 65,
@@ -341,13 +388,12 @@
       "recoilPattern": "vertical_compensate",
       "aimLock": {
         "enabled": true,
-        "strength": 0.90,
+        "strength": 0.9,
         "speed": 0.03,
         "stickiness": 0.92,
         "mode": "hardLock"
       }
     },
-
     "marksman": {
       "bulletSpeed": 1100,
       "magnetRadius": 45,
@@ -368,7 +414,6 @@
       }
     }
   },
-
   "advancedFeatures": {
     "autoHeadshot": {
       "enabled": true,
@@ -406,7 +451,6 @@
       "glitchAssist": false
     }
   },
-
   "performance": {
     "optimizationLevel": "ultra",
     "cpuUsage": "low",
