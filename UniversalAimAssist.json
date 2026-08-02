@@ -1,0 +1,229 @@
+{
+  "version": "2.0.0-ULTRA",
+  "targetGame": "com.activision.callofduty.shooter",
+  "configType": "ultra_aim_assist",
+  "lastUpdated": "2026-08-01",
+  "author": "Hermes Team",
+
+  "universalAimAssist": {
+    "enabled": true,
+    "masterStrength": 1.0,
+    "mode": "ultra_aggressive",
+
+    "targetSelection": {
+      "primaryBone": "head",
+      "secondaryBone": "chest",
+      "tertiaryBone": "neck",
+      "autoSwitchBone": true,
+      "boneSwitchDistance": 15,
+      "maxDistance": 9999,
+      "minDistance": 0,
+      "teamCheck": true,
+      "visibilityCheck": false,
+      "targetSwitchCooldown": 50,
+      "priorityMode": "headshot_first",
+      "stabilityThreshold": 0.1
+    },
+
+    "magnetSystem": {
+      "enabled": true,
+      "pullForce": 0.95,
+      "fovRadius": 75,
+      "deadzone": 0.1,
+      "hipFireAssist": true,
+      "adsAssist": true,
+      "scopeAssist": true,
+      "sniperAssist": true,
+      "shotgunAssist": true,
+      "predictionStrength": 0.85,
+      "interpolationMode": "cubic",
+      "smoothingAlgorithm": "adaptive_kalman",
+      "pullAcceleration": 1.2,
+      "maxPullSpeed": 5.0,
+      "snapThreshold": 0.3
+    },
+
+    "antiJitterAndRecoil": {
+      "antiJitterEnabled": true,
+      "jitterSmoothing": 0.95,
+      "recoilCompensation": true,
+      "recoilStrength": 0.92,
+      "smoothFactor": 1.6,
+      "microAdjustments": true,
+      "adaptiveSmoothing": true,
+      "recoilPatternMemory": true,
+      "recoilPrediction": true,
+      "verticalRecoil": 0.88,
+      "horizontalRecoil": 0.75,
+      "burstRecoil": 0.82
+    },
+
+    "predictionEngine": {
+      "enabled": true,
+      "pingCompensation": true,
+      "bulletPrediction": true,
+      "movementPrediction": true,
+      "strafePrediction": true,
+      "jumpPrediction": true,
+      "crouchPrediction": true,
+      "slidePrediction": true,
+      "fpsInterpolation": 144,
+      "latencyCompensation": 0.95,
+      "predictionAccuracy": 0.92,
+      "dynamicPrediction": true,
+      "trajectoryCalculation": "ballistic_arc"
+    }
+  },
+
+  "weaponProfiles": {
+    "autoDetectWeapon": true,
+    "switchDelay": 100,
+
+    "assaultRifle": {
+      "bulletSpeed": 920,
+      "magnetRadius": 55,
+      "smoothness": 1.4,
+      "recoilCompensation": 0.85,
+      "spreadReduction": 0.9,
+      "fireRate": 750,
+      "damageMultiplier": 1.1,
+      "rangeMultiplier": 1.15,
+      "burstControl": true,
+      "autoBurst": true,
+      "recoilPattern": "vertical_compensate"
+    },
+
+    "smg": {
+      "bulletSpeed": 650,
+      "magnetRadius": 75,
+      "smoothness": 1.0,
+      "recoilCompensation": 0.92,
+      "spreadReduction": 0.85,
+      "fireRate": 900,
+      "damageMultiplier": 1.05,
+      "rangeMultiplier": 0.9,
+      "hipFireBonus": 1.2,
+      "closeRangeBoost": 1.3,
+      "recoilPattern": "circular_compensate"
+    },
+
+    "sniper": {
+      "bulletSpeed": 1350,
+      "magnetRadius": 40,
+      "smoothness": 2.4,
+      "recoilCompensation": 0.15,
+      "spreadReduction": 0.95,
+      "fireRate": 60,
+      "damageMultiplier": 1.5,
+      "rangeMultiplier": 2.0,
+      "quickScopeAssist": true,
+      "hardScopeAssist": true,
+      "bulletDropCompensation": true,
+      "headshotMultiplier": 2.5,
+      "recoilPattern": "minimal"
+    },
+
+    "shotgun": {
+      "bulletSpeed": 500,
+      "magnetRadius": 95,
+      "smoothness": 0.8,
+      "recoilCompensation": 1.0,
+      "spreadReduction": 0.7,
+      "fireRate": 120,
+      "damageMultiplier": 1.3,
+      "rangeMultiplier": 0.7,
+      "pelletOptimization": true,
+      "centerMassBonus": 1.4,
+      "recoilPattern": "full_compensate"
+    },
+
+    "lmg": {
+      "bulletSpeed": 860,
+      "magnetRadius": 60,
+      "smoothness": 1.9,
+      "recoilCompensation": 0.95,
+      "spreadReduction": 0.88,
+      "fireRate": 650,
+      "damageMultiplier": 1.1,
+      "rangeMultiplier": 1.2,
+      " sustainedFireBonus": 1.15,
+      "overheatManagement": true,
+      "recoilPattern": "progressive_compensate"
+    },
+
+    "pistol": {
+      "bulletSpeed": 550,
+      "magnetRadius": 65,
+      "smoothness": 1.2,
+      "recoilCompensation": 0.8,
+      "spreadReduction": 0.85,
+      "fireRate": 400,
+      "damageMultiplier": 1.0,
+      "rangeMultiplier": 0.8,
+      "rapidFireAssist": true,
+      "recoilPattern": "vertical_compensate"
+    },
+
+    "marksman": {
+      "bulletSpeed": 1100,
+      "magnetRadius": 45,
+      "smoothness": 2.0,
+      "recoilCompensation": 0.3,
+      "spreadReduction": 0.92,
+      "fireRate": 150,
+      "damageMultiplier": 1.3,
+      "rangeMultiplier": 1.8,
+      "semiAutoAssist": true,
+      "recoilPattern": "minimal"
+    }
+  },
+
+  "advancedFeatures": {
+    "autoHeadshot": {
+      "enabled": true,
+      "priority": 1,
+      "headshotPercentage": 0.85,
+      "adaptiveHeadshot": true
+    },
+    "bulletPenetration": {
+      "enabled": true,
+      "wallbangAssist": true,
+      "penetrationDamage": 0.7,
+      "materialDetection": true
+    },
+    "targetLock": {
+      "enabled": true,
+      "lockStrength": 0.95,
+      "lockDuration": 3000,
+      "breakOnSmoke": false,
+      "breakOnFlash": false,
+      "stickyAim": true
+    },
+    "movementAssist": {
+      "strafeAim": true,
+      "jumpShot": true,
+      "dropShot": true,
+      "slideCancel": true,
+      "bunnyHop": true,
+      "movementPrediction": true
+    },
+    "visibilityAssist": {
+      "thermalAssist": true,
+      "nightVisionAssist": true,
+      "smokeAssist": false,
+      "flashAssist": false,
+      "glitchAssist": false
+    }
+  },
+
+  "performance": {
+    "optimizationLevel": "ultra",
+    "cpuUsage": "low",
+    "memoryUsage": "moderate",
+    "gpuUsage": "minimal",
+    "latencyTarget": 5,
+    "frameRateTarget": 144,
+    "adaptiveQuality": true,
+    "powerSaving": false
+  }
+}

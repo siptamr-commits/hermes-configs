@@ -1,0 +1,142 @@
+{
+  "version": "2.0.0-ULTRA",
+  "magic_bullet": {
+    "enabled": true,
+    "mode": "advanced",
+    
+    "damage": {
+      "base_damage": 999,
+      "headshot_multiplier": 3.0,
+      "bodyshot_multiplier": 1.5,
+      "limb_multiplier": 1.0,
+      "critical_hit_chance": 100,
+      "critical_damage_multiplier": 2.5,
+      "armor_piercing": true,
+      "armor_penetration": 100
+    },
+    
+    "penetration": {
+      "enabled": true,
+      "wallbang": true,
+      "material_penetration": {
+        "wood": 100,
+        "metal": 80,
+        "concrete": 60,
+        "glass": 100,
+        "dirt": 90,
+        "water": 70
+      },
+      "through_wall_damage": 0.8,
+      "multi_wall_damage": 0.6,
+      "max_walls": 3
+    },
+    
+    "accuracy": {
+      "base_accuracy": 999,
+      "moving_accuracy": 999,
+      "jumping_accuracy": 999,
+      "crouching_accuracy": 999,
+      "prone_accuracy": 999,
+      "ads_accuracy": 999,
+      "hipfire_accuracy": 999,
+      "spread_reduction": 100,
+      "bloom_reduction": 100
+    },
+    
+    "range": {
+      "effective_range": 999,
+      "damage_range": 999,
+      "bullet_velocity": 9999,
+      "bullet_drop": 0,
+      "bullet_gravity": 0,
+      "hitbox_expansion": 2.0,
+      "aim_assist_range": 999
+    },
+    
+    "fire_rate": {
+      "base_fire_rate": 999,
+      "burst_fire_rate": 999,
+      "semi_auto_fire_rate": 999,
+      "fire_rate_multiplier": 2.0,
+      "reload_speed": 0.1,
+      "reload_speed_multiplier": 3.0,
+      "weapon_swap_speed": 0.1
+    },
+    
+    "special": {
+      "explosive_rounds": true,
+      "explosion_radius": 10,
+      "explosion_damage": 500,
+      "incendiary_rounds": true,
+      "incendiary_damage": 100,
+      "incendiary_duration": 5,
+      "tracer_rounds": true,
+      "tracer_color": "red",
+      "silenced": false,
+      "infinite_ammo": true,
+      "no_recoil": true,
+      "no_spread": true,
+      "instant_hit": true,
+      "hit_scan": true
+    },
+    
+    "prediction": {
+      "bullet_prediction": true,
+      "trajectory_prediction": true,
+      "lead_calculation": true,
+      "bullet_drop_compensation": true,
+      "wind_compensation": false,
+      "lag_compensation": true,
+      "ping_compensation": true,
+      "movement_prediction": true,
+      "strafe_prediction": true,
+      "jump_prediction": true
+    },
+    
+    "targeting": {
+      "auto_target": true,
+      "target_lock": true,
+      "lock_duration": 5000,
+      "target_switch_speed": 0.1,
+      "priority_targeting": "head",
+      "smart_targeting": true,
+      "threat_assessment": true,
+      "auto_aim": true,
+      "aim_snap": true,
+      "snap_speed": 0.05,
+      "tracking_smoothness": 0.95
+    },
+    
+    "visualization": {
+      "hitmarkers": true,
+      "damage_numbers": true,
+      "killfeed_highlight": true,
+      "target_outlines": true,
+      "outline_color": "red",
+      "tracer_visualization": true,
+      "bullet_trails": true
+    }
+  },
+  
+  "weapon_mods": {
+    "infinite_ammo": true,
+    "no_reload": false,
+    "instant_reload": true,
+    "dual_wield": false,
+    "rapid_fire": true,
+    "auto_fire": true,
+    "burst_mod": true,
+    "full_auto_conversion": true
+  },
+  
+  "anti_detection": {
+    "humanization": true,
+    "random_delay": true,
+    "min_delay": 10,
+    "max_delay": 50,
+    "aim_variance": 0.1,
+    "recoil_variance": 0.05,
+    "timing_variance": 0.1,
+    "stat_variation": true
+  }
+}

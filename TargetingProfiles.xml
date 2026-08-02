@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Hermes Advanced Targeting System v2.0
+  Professional Target Profiles & Aim Mappings
+-->
+
+<TargetingSystem version="2.0.0-ULTRA">
+  
+  <!-- ============================ -->
+  <!-- TARGET PROFILES              -->
+  <!-- ============================ -->
+  
+  <TargetProfiles>
+    
+    <Profile name="aggressive" priority="1">
+      <Description>Maximum aggression, headshot priority</Description>
+      <TargetSelection>
+        <PrimaryTarget>head</PrimaryTarget>
+        <SecondaryTarget>chest</SecondaryTarget>
+        <TertiaryTarget>neck</TertiaryTarget>
+        <AutoSwitch>true</AutoSwitch>
+        <SwitchDistance>20</SwitchDistance>
+        <PriorityMode>headshot_first</PriorityMode>
+      </TargetSelection>
+      <AimSettings>
+        <PullForce>0.95</PullForce>
+        <FOVRadius>80</FOVRadius>
+        <Deadzone>0.05</Deadzone>
+        <Smoothing>0.85</Smoothing>
+        <PredictionStrength>0.90</PredictionStrength>
+        <Interpolation>cubic</Interpolation>
+      </AimSettings>
+      <ReactionSettings>
+        <ReactionTime>0.05</ReactionTime>
+        <TargetSwitchSpeed>0.1</TargetSwitchSpeed>
+        <LockDuration>5000</LockDuration>
+        <BreakOnSmoke>false</BreakOnSmoke>
+        <BreakOnFlash>false</BreakOnFlash>
+      </ReactionSettings>
+    </Profile>
+    
+    <Profile name="defensive" priority="2">
+      <Description>Balanced approach, body shots</Description>
+      <TargetSelection>
+        <PrimaryTarget>chest</PrimaryTarget>
+        <SecondaryTarget>head</SecondaryTarget>
+        <TertiaryTarget>stomach</TertiaryTarget>
+        <AutoSwitch>true</AutoSwitch>
+        <SwitchDistance>15</SwitchDistance>
+        <PriorityMode>damage_first</PriorityMode>
+      </TargetSelection>
+      <AimSettings>
+        <PullForce>0.85</PullForce>
+        <FOVRadius>70</FOVRadius>
+        <Deadzone>0.1</Deadzone>
+        <Smoothing>0.90</Smoothing>
+        <PredictionStrength>0.80</PredictionStrength>
+        <Interpolation>linear</Interpolation>
+      </AimSettings>
+      <ReactionSettings>
+        <ReactionTime>0.1</ReactionTime>
+        <TargetSwitchSpeed>0.2</TargetSwitchSpeed>
+        <LockDuration>3000</LockDuration>
+        <BreakOnSmoke>true</BreakOnSmoke>
+        <BreakOnFlash>true</BreakOnFlash>
+      </ReactionSettings>
+    </Profile>
+    
+    <Profile name="sniper" priority="3">
+      <Description>Long range precision</Description>
+      <TargetSelection>
+        <PrimaryTarget>head</PrimaryTarget>
+        <SecondaryTarget>neck</SecondaryTarget>
+        <TertiaryTarget>chest</TertiaryTarget>
+        <AutoSwitch>false</AutoSwitch>
+        <SwitchDistance>5</SwitchDistance>
+        <PriorityMode>headshot_only</PriorityMode>
+      </TargetSelection>
+      <AimSettings>
+        <PullForce>0.70</PullForce>
+        <FOVRadius>50</FOVRadius>
+        <Deadzone>0.15</Deadzone>
+        <Smoothing>0.95</Smoothing>
+        <PredictionStrength>0.95</PredictionStrength>
+        <Interpolation>spline</Interpolation>
+      </AimSettings>
+      <ReactionSettings>
+        <ReactionTime>0.15</ReactionTime>
+        <TargetSwitchSpeed>0.5</TargetSwitchSpeed>
+        <LockDuration>2000</LockDuration>
+        <BreakOnSmoke>true</BreakOnSmoke>
+        <BreakOnFlash>true</BreakOnFlash>
+      </ReactionSettings>
+      <SniperSettings>
+        <QuickScopeAssist>true</QuickScopeAssist>
+        <HardScopeAssist>true</HardScopeAssist>
+        <NoScopeAssist>false</NoScopeAssist>
+        <BulletDropCompensation>true</BulletDropCompensation>
+        <LeadingCalculation>true</LeadingCalculation>
+        <HeadshotMultiplier>2.5</HeadshotMultiplier>
+      </SniperSettings>
+    </Profile>
+    
+    <Profile name="close_range" priority="4">
+      <Description>Close quarters combat</Description>
+      <TargetSelection>
+        <PrimaryTarget>chest</PrimaryTarget>
+        <SecondaryTarget>head</SecondaryTarget>
+        <TertiaryTarget>stomach</TertiaryTarget>
+        <AutoSwitch>true</AutoSwitch>
+        <SwitchDistance>25</SwitchDistance>
+        <PriorityMode>fastest_kill</PriorityMode>
+      </TargetSelection>
+      <AimSettings>
+        <PullForce>0.98</PullForce>
+        <FOVRadius>90</FOVRadius>
+        <Deadzone>0.02</Deadzone>
+        <Smoothing>0.80</Smoothing>
+        <PredictionStrength>0.85</PredictionStrength>
+        <Interpolation>linear</Interpolation>
+      </AimSettings>
+      <ReactionSettings>
+        <ReactionTime>0.02</ReactionTime>
+        <TargetSwitchSpeed>0.05</TargetSwitchSpeed>
+        <LockDuration>1000</LockDuration>
+        <BreakOnSmoke>false</BreakOnSmoke>
+        <BreakOnFlash>false</BreakOnFlash>
+      </ReactionSettings>
+    </Profile>
+    
+  </TargetProfiles>
+  
+  <!-- ============================ -->
+  <!-- AIM MAPPINGS                 -->
+  <!-- ============================ -->
+  
+  <AimMappings>
+    <Mapping action="aim_down_sights" key="RightMouse" />
+    <Mapping action="fire_weapon" key="LeftMouse" />
+    <Mapping action="melee_attack" key="V" />
+    <Mapping action="reload_weapon" key="R" />
+    <Mapping action="crouch" key="Ctrl" />
+    <Mapping action="prone" key="Z" />
+    <Mapping action="sprint" key="Shift" />
+    <Mapping action="jump" key="Space" />
+    <Mapping action="use_item" key="F" />
+    <Mapping action="grenade" key="G" />
+    <Mapping action="tactical" key="Q" />
+    <Mapping action="weapon_slot_1" key="1" />
+    <Mapping action="weapon_slot_2" key="2" />
+    <Mapping action="weapon_slot_3" key="3" />
+    <Mapping action="map" key="M" />
+    <Mapping action="scoreboard" key="Tab" />
+    <Mapping action="chat" key="Enter" />
+    <Mapping action="voice_chat" key="X" />
+  </AimMappings>
+  
+  <!-- ============================ -->
+  <!-- DISTANCE PROFILES            -->
+  <!-- ============================ -->
+  
+  <DistanceProfiles>
+    <Distance max="5" name="point_blank">
+      <AimStrength>100</AimStrength>
+      <ReactionSpeed>0.02</ReactionSpeed>
+      <TargetSwitch>0.05</TargetSwitch>
+      <RecommendedWeapon>shotgun, smg</RecommendedWeapon>
+    </Distance>
+    <Distance max="15" name="close">
+      <AimStrength>95</AimStrength>
+      <ReactionSpeed>0.05</ReactionSpeed>
+      <TargetSwitch>0.1</TargetSwitch>
+      <RecommendedWeapon>smg, assault_rifle</RecommendedWeapon>
+    </Distance>
+    <Distance max="30" name="mid">
+      <AimStrength>85</AimStrength>
+      <ReactionSpeed>0.1</ReactionSpeed>
+      <TargetSwitch>0.2</TargetSwitch>
+      <RecommendedWeapon>assault_rifle, marksman</RecommendedWeapon>
+    </Distance>
+    <Distance max="60" name="long">
+      <AimStrength>70</AimStrength>
+      <ReactionSpeed>0.15</ReactionSpeed>
+      <TargetSwitch>0.3</TargetSwitch>
+      <RecommendedWeapon>marksman, sniper</RecommendedWeapon>
+    </Distance>
+    <Distance max="999" name="extreme">
+      <AimStrength>50</AimStrength>
+      <ReactionSpeed>0.2</ReactionSpeed>
+      <TargetSwitch>0.5</TargetSwitch>
+      <RecommendedWeapon>sniper</RecommendedWeapon>
+    </Distance>
+  </DistanceProfiles>
+  
+</TargetingSystem>
