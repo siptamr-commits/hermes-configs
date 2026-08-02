@@ -1,8 +1,8 @@
 {
-  "version": "2.0.0-ULTRA",
+  "version": "3.0.0-ULTRA-PRO",
   "targetGame": "com.activision.callofduty.shooter",
-  "configType": "ultra_aim_assist",
-  "lastUpdated": "2026-08-01",
+  "configType": "ultra_aim_assist_with_aimlock",
+  "lastUpdated": "2026-08-02",
   "author": "Hermes Team",
 
   "universalAimAssist": {
@@ -72,6 +72,146 @@
       "predictionAccuracy": 0.92,
       "dynamicPrediction": true,
       "trajectoryCalculation": "ballistic_arc"
+    },
+
+    "aimLock": {
+      "enabled": true,
+      "lockStrength": 0.98,
+      "lockSpeed": 0.05,
+      "lockDuration": 5000,
+      "lockBreakTime": 0.1,
+      "lockReacquire": true,
+      "lockReacquireSpeed": 0.02,
+      "lockStickiness": 0.95,
+      "lockFriction": 0.8,
+      "lockMagnetism": 1.0,
+      "lockAdhesion": 0.95,
+      "lockSmoothing": 0.9,
+      "lockJitterReduction": 0.98,
+      "lockMicroAdjust": true,
+      "lockHeadPriority": true,
+      "lockChestFallback": true,
+      "lockNeckFallback": true,
+      "lockBodyAim": false,
+      "lockLimbAim": false,
+
+      "lockByDistance": {
+        "pointBlank": {"strength": 1.0, "speed": 0.02, "stickiness": 0.98},
+        "close": {"strength": 0.95, "speed": 0.03, "stickiness": 0.95},
+        "mid": {"strength": 0.85, "speed": 0.05, "stickiness": 0.90},
+        "long": {"strength": 0.70, "speed": 0.08, "stickiness": 0.85},
+        "extreme": {"strength": 0.50, "speed": 0.12, "stickiness": 0.80}
+      },
+
+      "lockByWeapon": {
+        "assaultRifle": {"strength": 0.92, "speed": 0.04, "stickiness": 0.93},
+        "smg": {"strength": 0.95, "speed": 0.02, "stickiness": 0.96},
+        "sniper": {"strength": 0.70, "speed": 0.08, "stickiness": 0.85},
+        "shotgun": {"strength": 0.98, "speed": 0.01, "stickiness": 0.98},
+        "lmg": {"strength": 0.88, "speed": 0.05, "stickiness": 0.90},
+        "pistol": {"strength": 0.90, "speed": 0.03, "stickiness": 0.92},
+        "marksman": {"strength": 0.75, "speed": 0.07, "stickiness": 0.87}
+      },
+
+      "lockByScope": {
+        "redDot": {"strength": 0.95, "speed": 0.03, "stickiness": 0.95},
+        "holographic": {"strength": 0.93, "speed": 0.03, "stickiness": 0.94},
+        "acog": {"strength": 0.88, "speed": 0.05, "stickiness": 0.92},
+        "sniperScope": {"strength": 0.70, "speed": 0.08, "stickiness": 0.85},
+        "thermal": {"strength": 0.90, "speed": 0.04, "stickiness": 0.93},
+        "noScope": {"strength": 0.98, "speed": 0.01, "stickiness": 0.98}
+      },
+
+      "lockModes": {
+        "softLock": {
+          "enabled": true,
+          "description": ".lock ظریف - قفل آروم ولی دقیق",
+          "strength": 0.70,
+          "speed": 0.08,
+          "stickiness": 0.85,
+          "humanized": true
+        },
+        "hardLock": {
+          "enabled": true,
+          "description": "قفل سخت - سریع و محکم",
+          "strength": 0.95,
+          "speed": 0.02,
+          "stickiness": 0.98,
+          "humanized": false
+        },
+        "snapLock": {
+          "enabled": true,
+          "description": "قفل ضربه‌ای - فوری روی هدف",
+          "strength": 1.0,
+          "speed": 0.01,
+          "stickiness": 1.0,
+          "humanized": false,
+          "snapDelay": 50
+        },
+        "stickyLock": {
+          "enabled": true,
+          "description": "قفل چسبناک - محکم نگه میداره",
+          "strength": 0.90,
+          "speed": 0.04,
+          "stickiness": 0.99,
+          "humanized": true,
+          "breakThreshold": 0.3
+        },
+        "predictiveLock": {
+          "enabled": true,
+          "description": "قفل پیش‌بین - حرکت رو پیش‌بینی می‌کنه",
+          "strength": 0.85,
+          "speed": 0.05,
+          "stickiness": 0.92,
+          "humanized": true,
+          "predictionStrength": 0.90
+        },
+        "assistedLock": {
+          "enabled": true,
+          "description": "قفل کمکی - فقط کمک می‌کنه نه قفل کامل",
+          "strength": 0.50,
+          "speed": 0.10,
+          "stickiness": 0.70,
+          "humanized": true,
+          "assistOnly": true
+        }
+      },
+
+      "lockBreakConditions": {
+        "breakOnSmoke": false,
+        "breakOnFlash": false,
+        "breakOnStun": false,
+        "breakOnDeath": true,
+        "breakOnWeaponSwitch": true,
+        "breakOnReload": false,
+        "breakOnSlide": false,
+        "breakOnJump": false,
+        "breakOnCrouch": false,
+        "breakOnProne": false,
+        "breakOnDistance": true,
+        "breakDistance": 100,
+        "breakOnTeammate": true,
+        "breakOnWall": true,
+        "breakOnObstacle": false
+      },
+
+      "lockAdvanced": {
+        "adaptiveLock": true,
+        "dynamicStrength": true,
+        "contextAwareLock": true,
+        "situationalLock": true,
+        "lockBasedOnMovement": true,
+        "lockBasedOnHealth": true,
+        "lockBasedOnAmmo": true,
+        "lockBasedOnThreat": true,
+        "lockBasedOnRange": true,
+        "lockBasedOnWeapon": true,
+        "lockBasedOnScope": true,
+        "lockBasedOnStance": true,
+        "lockBasedOnPosition": true,
+        "lockBasedOnWeather": true,
+        "lockBasedOnTime": true
+      }
     }
   },
 
@@ -90,7 +230,14 @@
       "rangeMultiplier": 1.15,
       "burstControl": true,
       "autoBurst": true,
-      "recoilPattern": "vertical_compensate"
+      "recoilPattern": "vertical_compensate",
+      "aimLock": {
+        "enabled": true,
+        "strength": 0.92,
+        "speed": 0.04,
+        "stickiness": 0.93,
+        "mode": "hardLock"
+      }
     },
 
     "smg": {
@@ -104,7 +251,14 @@
       "rangeMultiplier": 0.9,
       "hipFireBonus": 1.2,
       "closeRangeBoost": 1.3,
-      "recoilPattern": "circular_compensate"
+      "recoilPattern": "circular_compensate",
+      "aimLock": {
+        "enabled": true,
+        "strength": 0.95,
+        "speed": 0.02,
+        "stickiness": 0.96,
+        "mode": "snapLock"
+      }
     },
 
     "sniper": {
@@ -120,7 +274,16 @@
       "hardScopeAssist": true,
       "bulletDropCompensation": true,
       "headshotMultiplier": 2.5,
-      "recoilPattern": "minimal"
+      "recoilPattern": "minimal",
+      "aimLock": {
+        "enabled": true,
+        "strength": 0.70,
+        "speed": 0.08,
+        "stickiness": 0.85,
+        "mode": "softLock",
+        "quickScopeLock": true,
+        "hardScopeLock": true
+      }
     },
 
     "shotgun": {
@@ -134,7 +297,14 @@
       "rangeMultiplier": 0.7,
       "pelletOptimization": true,
       "centerMassBonus": 1.4,
-      "recoilPattern": "full_compensate"
+      "recoilPattern": "full_compensate",
+      "aimLock": {
+        "enabled": true,
+        "strength": 0.98,
+        "speed": 0.01,
+        "stickiness": 0.98,
+        "mode": "snapLock"
+      }
     },
 
     "lmg": {
@@ -146,9 +316,16 @@
       "fireRate": 650,
       "damageMultiplier": 1.1,
       "rangeMultiplier": 1.2,
-      " sustainedFireBonus": 1.15,
+      "sustainedFireBonus": 1.15,
       "overheatManagement": true,
-      "recoilPattern": "progressive_compensate"
+      "recoilPattern": "progressive_compensate",
+      "aimLock": {
+        "enabled": true,
+        "strength": 0.88,
+        "speed": 0.05,
+        "stickiness": 0.90,
+        "mode": "hardLock"
+      }
     },
 
     "pistol": {
@@ -161,7 +338,14 @@
       "damageMultiplier": 1.0,
       "rangeMultiplier": 0.8,
       "rapidFireAssist": true,
-      "recoilPattern": "vertical_compensate"
+      "recoilPattern": "vertical_compensate",
+      "aimLock": {
+        "enabled": true,
+        "strength": 0.90,
+        "speed": 0.03,
+        "stickiness": 0.92,
+        "mode": "hardLock"
+      }
     },
 
     "marksman": {
@@ -174,7 +358,14 @@
       "damageMultiplier": 1.3,
       "rangeMultiplier": 1.8,
       "semiAutoAssist": true,
-      "recoilPattern": "minimal"
+      "recoilPattern": "minimal",
+      "aimLock": {
+        "enabled": true,
+        "strength": 0.75,
+        "speed": 0.07,
+        "stickiness": 0.87,
+        "mode": "predictiveLock"
+      }
     }
   },
 
