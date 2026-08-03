@@ -1,46 +1,70 @@
 {
-  "version": "3.2.0-LITE",
-  "mode": "ultra_lite",
+  "version": "4.0.0-FAST-PRO",
+  "mode": "fast_pro",
   "targetGame": "com.activision.callofduty.shooter",
 
   "aimAssist": {
     "enabled": true,
-    "strength": 0.80,
-    "fovRadius": 55,
-    "deadzone": 0.25,
-    "pullForce": 0.75,
-    "smoothness": 0.85,
+    "strength": 0.95,
+    "fovRadius": 70,
+    "deadzone": 0.15,
+    "pullForce": 0.92,
+    "smoothness": 0.90,
     "interpolation": "linear",
-    "targetBone": "chest",
-    "maxDistance": 400,
-    "teamCheck": true
+    "targetBone": "head",
+    "maxDistance": 600,
+    "teamCheck": true,
+    "prediction": true,
+    "predictionStrength": 0.80
   },
 
   "aimLock": {
     "enabled": true,
-    "strength": 0.82,
-    "speed": 0.08,
-    "stickiness": 0.85,
-    "duration": 2500,
+    "strength": 0.95,
+    "speed": 0.04,
+    "stickiness": 0.95,
+    "duration": 4000,
     "breakOnDeath": true,
     "breakOnSwitch": true,
-    "breakOnWall": true
+    "breakOnWall": true,
+    "modes": {
+      "soft": {"strength": 0.70, "speed": 0.08},
+      "hard": {"strength": 0.95, "speed": 0.03},
+      "snap": {"strength": 1.0, "speed": 0.01}
+    }
   },
 
   "recoil": {
     "enabled": true,
-    "vertical": 0.75,
-    "horizontal": 0.65,
-    "smoothing": 0.88,
-    "microAdjust": false,
-    "prediction": false
+    "vertical": 0.90,
+    "horizontal": 0.80,
+    "smoothing": 0.92,
+    "microAdjust": true,
+    "prediction": true,
+    "burstControl": true
   },
 
   "prediction": {
     "enabled": true,
     "pingComp": true,
-    "bulletPredict": false,
-    "movementPredict": false,
-    "fps": 60
+    "bulletPredict": true,
+    "movementPredict": true,
+    "fps": 90
+  },
+
+  "magicBullet": {
+    "enabled": true,
+    "damage": 999,
+    "accuracy": 99,
+    "headshotMulti": 3.0,
+    "penetration": true,
+    "maxWalls": 3,
+    "wallDamage": 0.80,
+    "bulletSpeed": 9999,
+    "bulletDrop": 0,
+    "range": 999,
+    "infiniteAmmo": true,
+    "noRecoil": true,
+    "noSpread": true
   }
 }

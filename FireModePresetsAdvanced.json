@@ -1,33 +1,33 @@
 {
-  "version": "2.1.0-LITE",
-  "mode": "ultra_lite",
+  "version": "4.0.0-FAST-PRO",
+  "mode": "fast_pro",
 
   "fireModes": {
     "ar": {
-      "single": {"rate": 400, "recoil": 0.90, "accuracy": 99},
-      "burst": {"rate": 750, "burst": 3, "recoil": 0.85, "accuracy": 98},
-      "auto": {"rate": 800, "recoil": 0.80, "accuracy": 97}
+      "single": {"rate": 450, "recoil": 0.92, "accuracy": 99.5},
+      "burst": {"rate": 780, "burst": 3, "recoil": 0.88, "accuracy": 99},
+      "auto": {"rate": 820, "recoil": 0.85, "accuracy": 98}
     },
     "smg": {
-      "auto": {"rate": 1000, "recoil": 0.88, "accuracy": 96}
+      "auto": {"rate": 1050, "recoil": 0.90, "accuracy": 97}
     },
     "sniper": {
-      "bolt": {"rate": 50, "recoil": 0.15, "accuracy": 99}
+      "bolt": {"rate": 55, "recoil": 0.18, "accuracy": 99.5}
     },
     "shotgun": {
-      "pump": {"rate": 80, "recoil": 0.95, "accuracy": 92}
+      "pump": {"rate": 90, "recoil": 0.96, "accuracy": 94}
     },
     "lmg": {
-      "auto": {"rate": 700, "recoil": 0.85, "accuracy": 95}
+      "auto": {"rate": 720, "recoil": 0.88, "accuracy": 96}
     }
   },
 
   "weaponStats": {
-    "damageMulti": 8.0,
-    "headMulti": 2.5,
-    "rangeMulti": 8.0,
-    "fireRateMulti": 1.8,
-    "reloadMulti": 4.0,
-    "accuracyMulti": 8.0
+    "damageMulti": 10.0,
+    "headMulti": 3.0,
+    "rangeMulti": 10.0,
+    "fireRateMulti": 2.0,
+    "reloadMulti": 5.0,
+    "accuracyMulti": 10.0
   }
 }

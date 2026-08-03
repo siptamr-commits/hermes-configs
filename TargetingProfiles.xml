@@ -1,38 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Targeting version="2.1.0-LITE" mode="ultra_lite">
+<Targeting version="4.0.0-FAST-PRO" mode="fast_pro">
 
-  <Profile name="default">
-    <Primary>chest</Primary>
-    <Secondary>head</Secondary>
-    <MaxDist>400</MaxDist>
-    <Strength>0.82</Strength>
-    <Speed>0.08</Speed>
-    <Stickiness>0.85</Stickiness>
+  <Profile name="aggressive">
+    <Primary>head</Primary>
+    <Secondary>chest</Secondary>
+    <MaxDist>600</MaxDist>
+    <Strength>0.95</Strength>
+    <Speed>0.04</Speed>
+    <Stickiness>0.95</Stickiness>
+    <Prediction>true</Prediction>
   </Profile>
 
   <Profile name="sniper">
     <Primary>head</Primary>
     <Secondary>neck</Secondary>
     <MaxDist>999</MaxDist>
-    <Strength>0.60</Strength>
-    <Speed>0.12</Speed>
-    <Stickiness>0.80</Stickiness>
+    <Strength>0.75</Strength>
+    <Speed>0.10</Speed>
+    <Stickiness>0.88</Stickiness>
+    <Prediction>true</Prediction>
   </Profile>
 
   <Profile name="close">
     <Primary>chest</Primary>
     <Secondary>head</Secondary>
-    <MaxDist>20</MaxDist>
-    <Strength>0.90</Strength>
-    <Speed>0.03</Speed>
-    <Stickiness>0.92</Stickiness>
+    <MaxDist>25</MaxDist>
+    <Strength>0.98</Strength>
+    <Speed>0.02</Speed>
+    <Stickiness>0.98</Stickiness>
+    <Prediction>true</Prediction>
   </Profile>
 
   <Distances>
-    <Close max="10" strength="0.92" speed="0.03"/>
-    <Mid max="30" strength="0.82" speed="0.08"/>
-    <Long max="60" strength="0.65" speed="0.12"/>
-    <Extreme max="999" strength="0.45" speed="0.15"/>
+    <Close max="10" strength="0.98" speed="0.02"/>
+    <Mid max="30" strength="0.92" speed="0.05"/>
+    <Long max="60" strength="0.80" speed="0.08"/>
+    <Extreme max="999" strength="0.60" speed="0.12"/>
   </Distances>
+
+  <BreakConditions>
+    <BreakOnDeath>true</BreakOnDeath>
+    <BreakOnSwitch>true</BreakOnSwitch>
+    <BreakOnWall>true</BreakOnWall>
+    <BreakOnSmoke>false</BreakOnSmoke>
+    <BreakOnFlash>false</BreakOnFlash>
+  </BreakConditions>
 
 </Targeting>
