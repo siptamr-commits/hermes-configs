@@ -1,0 +1,148 @@
+{
+  "version": "4.1.0-FAST-PRO-AIMBOT",
+  "mode": "fast_pro_aimbot",
+
+  "aimbot": {
+    "enabled": true,
+
+    "settings": {
+      "fov": 180,
+      "smoothing": 0.88,
+      "aimSpeed": 0.95,
+      "targetBone": "head",
+      "maxDistance": 600,
+      "autoFire": true,
+      "triggerbot": true,
+      "silentAim": true
+    },
+
+    "bones": {
+      "head": {"priority": 1, "multiplier": 3.0, "hitbox": "small"},
+      "neck": {"priority": 2, "multiplier": 2.5, "hitbox": "small"},
+      "chest": {"priority": 3, "multiplier": 1.5, "hitbox": "medium"},
+      "stomach": {"priority": 4, "multiplier": 1.0, "hitbox": "large"},
+      "leftArm": {"priority": 5, "multiplier": 0.8, "hitbox": "medium"},
+      "rightArm": {"priority": 6, "multiplier": 0.8, "hitbox": "medium"},
+      "leftLeg": {"priority": 7, "multiplier": 0.7, "hitbox": "large"},
+      "rightLeg": {"priority": 8, "multiplier": 0.7, "hitbox": "large"}
+    },
+
+    "modes": {
+      "legit": {
+        "enabled": true,
+        "fov": 30,
+        "smoothing": 0.92,
+        "aimSpeed": 0.85,
+        "maxDistance": 200,
+        "targetBone": "chest",
+        "autoFire": false,
+        "triggerbot": true
+      },
+      "rage": {
+        "enabled": true,
+        "fov": 180,
+        "smoothing": 0.50,
+        "aimSpeed": 1.0,
+        "maxDistance": 600,
+        "targetBone": "head",
+        "autoFire": true,
+        "triggerbot": true
+      },
+      "silent": {
+        "enabled": true,
+        "fov": 180,
+        "accuracy": 99.9,
+        "targetBone": "head",
+        "visualRecoil": true
+      },
+      "triggerbot": {
+        "enabled": true,
+        "fov": 3,
+        "delay": 5,
+        "reactionTime": 10,
+        "targetLock": true
+      }
+    },
+
+    "targeting": {
+      "priorityMode": "distance",
+      "boneOrder": ["head", "neck", "chest"],
+      "visibleOnly": true,
+      "teamCheck": true,
+      "knockedCheck": true,
+      "throughSmoke": false,
+      "throughFlash": false
+    },
+
+    "firing": {
+      "autoFire": true,
+      "autoFireDelay": 10,
+      "fireMode": "auto",
+      "burstFire": false,
+      "burstCount": 3,
+      "burstDelay": 50,
+      "headshotOnly": false
+    },
+
+    "smoothing": {
+      "enabled": true,
+      "aimSpeed": 0.95,
+      "smoothingFactor": 0.88,
+      "jitterReduction": 0.92,
+      "recoilSmoothing": 0.90,
+      "microAdjust": true
+    },
+
+    "silentAim": {
+      "enabled": true,
+      "silentAimFOV": 180,
+      "silentAimBone": "head",
+      "silentAimAccuracy": 99.9,
+      "visualRecoil": true,
+      "bulletRedirect": true
+    },
+
+    "triggerbot": {
+      "enabled": true,
+      "fov": 3,
+      "delay": 5,
+      "reactionTime": 10,
+      "targetLock": true,
+      "autoShoot": true
+    },
+
+    "anticheat": {
+      "humanization": false,
+      "randomDelay": false,
+      "aimVariance": 0,
+      "timingVariance": 0,
+      "statVariation": false
+    },
+
+    "misc": {
+      "autoShot": true,
+      "autoHeadshot": true,
+      "noSpread": true,
+      "noRecoil": true,
+      "infiniteAmmo": true,
+      "instantReload": false,
+      "rapidFire": false,
+      "wallbang": true,
+      "esp": false,
+      "radar": false
+    }
+  },
+
+  "weaponProfiles": {
+    "M4A1": {"type": "ar", "aimbotFOV": 40, "smoothing": 0.90, "bone": "head"},
+    "AK47": {"type": "ar", "aimbotFOV": 45, "smoothing": 0.88, "bone": "head"},
+    "MP5": {"type": "smg", "aimbotFOV": 60, "smoothing": 0.85, "bone": "chest"},
+    "FENNEC": {"type": "smg", "aimbotFOV": 65, "smoothing": 0.83, "bone": "chest"},
+    "AWM": {"type": "sniper", "aimbotFOV": 20, "smoothing": 0.98, "bone": "head"},
+    "DLQ33": {"type": "sniper", "aimbotFOV": 20, "smoothing": 0.98, "bone": "head"},
+    "SPAS12": {"type": "shotgun", "aimbotFOV": 80, "smoothing": 0.80, "bone": "chest"},
+    "RPD": {"type": "lmg", "aimbotFOV": 35, "smoothing": 0.92, "bone": "head"},
+    "PHANTOM": {"type": "marksman", "aimbotFOV": 25, "smoothing": 0.96, "bone": "head"},
+    "G37": {"type": "ar", "aimbotFOV": 40, "smoothing": 0.90, "bone": "head"}
+  }
+}

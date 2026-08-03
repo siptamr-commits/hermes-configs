@@ -1,6 +1,6 @@
 {
-  "version": "4.0.0-FAST-PRO",
-  "mode": "fast_pro",
+  "version": "4.1.0-FAST-PRO-AIMBOT",
+  "mode": "fast_pro_aimbot",
   "targetGame": "com.activision.callofduty.shooter",
 
   "aimAssist": {
@@ -34,6 +34,74 @@
     }
   },
 
+  "aimbot": {
+    "enabled": true,
+    "mode": "silent",
+
+    "targeting": {
+      "autoTarget": true,
+      "targetSwitch": 50,
+      "priorityMode": "headshot",
+      "boneOrder": ["head", "neck", "chest", "stomach"],
+      "visibleOnly": true,
+      "teamCheck": true,
+      "knockedCheck": true
+    },
+
+    "firing": {
+      "autoFire": true,
+      "autoFireDelay": 10,
+      "fireMode": "triggerbot",
+      "triggerbotFOV": 3,
+      "triggerbotDelay": 5,
+      "burstFire": false,
+      "burstCount": 3,
+      "burstDelay": 50
+    },
+
+    "smoothing": {
+      "enabled": true,
+      "aimSpeed": 0.95,
+      "smoothingFactor": 0.88,
+      "jitterReduction": 0.92,
+      "recoilSmoothing": 0.90
+    },
+
+    "silentAim": {
+      "enabled": true,
+      "silentAimFOV": 180,
+      "silentAimBone": "head",
+      "silentAimAccuracy": 99.9,
+      "visualRecoil": true
+    },
+
+    "triggerbot": {
+      "enabled": true,
+      "fov": 3,
+      "delay": 5,
+      "reactionTime": 10,
+      "humanized": false,
+      "targetLock": true
+    },
+
+    "antiaim": {
+      "enabled": false,
+      "spinBot": false,
+      "jitter": false,
+      "reverse": false
+    },
+
+    "misc": {
+      "autoShot": true,
+      "autoHeadshot": true,
+      "noSpread": true,
+      "noRecoil": true,
+      "infiniteAmmo": true,
+      "instantReload": false,
+      "rapidFire": false
+    }
+  },
+
   "recoil": {
     "enabled": true,
     "vertical": 0.90,
@@ -55,7 +123,7 @@
   "magicBullet": {
     "enabled": true,
     "damage": 999,
-    "accuracy": 99,
+    "accuracy": 99.5,
     "headshotMulti": 3.0,
     "penetration": true,
     "maxWalls": 3,
@@ -65,6 +133,8 @@
     "range": 999,
     "infiniteAmmo": true,
     "noRecoil": true,
-    "noSpread": true
+    "noSpread": true,
+    "instantHit": true,
+    "hitScan": true
   }
 }
