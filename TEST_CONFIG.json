@@ -1,0 +1,75 @@
+{
+  "version": "TEST-0.1",
+  "mode": "test",
+  "type": "config_test",
+  "lastUpdated": "2026-08-03",
+
+  "testInfo": {
+    "purpose": "تست تنظیمات کانفیگ",
+    "author": "Hermes Team",
+    "warning": "این نسخه فقط برای تست هست",
+    "status": "draft"
+  },
+
+  "testCases": {
+    "aimAssist": {
+      "testName": "تست Aim Assist",
+      "settings": {
+        "strength": [0.5, 0.7, 0.9, 1.0],
+        "fovRadius": [30, 50, 70, 90],
+        "deadzone": [0.05, 0.1, 0.15, 0.2],
+        "pullForce": [0.5, 0.7, 0.9, 1.0]
+      },
+      "expected": "هدف‌گیری خودکار کار کنه"
+    },
+
+    "aimLock": {
+      "testName": "تست AimLock",
+      "settings": {
+        "strength": [0.5, 0.7, 0.9, 1.0],
+        "speed": [0.01, 0.05, 0.1, 0.2],
+        "stickiness": [0.5, 0.7, 0.9, 1.0]
+      },
+      "expected": "قفل روی هدف محکم باشه"
+    },
+
+    "aimbot": {
+      "testName": "تست Aimbot",
+      "settings": {
+        "fov": [30, 60, 90, 180, 360],
+        "smoothing": [0.01, 0.3, 0.5, 0.8],
+        "aimSpeed": [0.5, 0.7, 0.9, 1.0]
+      },
+      "modes": ["legit", "rage", "silent", "triggerbot"],
+      "expected": "هدف‌گیری خودکار دقیق باشه"
+    },
+
+    "recoil": {
+      "testName": "تست Recoil",
+      "settings": {
+        "vertical": [0.5, 0.7, 0.9, 1.0],
+        "horizontal": [0.5, 0.7, 0.9, 1.0],
+        "smoothing": [0.5, 0.7, 0.9, 1.0]
+      },
+      "expected": "پس‌زدن اسلحه جبران بشه"
+    },
+
+    "magicBullet": {
+      "testName": "تست Magic Bullet",
+      "settings": {
+        "damage": [100, 500, 999, 9999],
+        "accuracy": [50, 75, 90, 100],
+        "headshotMulti": [1.5, 2.0, 2.5, 3.0]
+      },
+      "expected": "آسیب و دقت بالا باشه"
+    }
+  },
+
+  "testResults": {
+    "aimAssist": {"status": "pending", "score": 0},
+    "aimLock": {"status": "pending", "score": 0},
+    "aimbot": {"status": "pending", "score": 0},
+    "recoil": {"status": "pending", "score": 0},
+    "magicBullet": {"status": "pending", "score": 0}
+  }
+}
