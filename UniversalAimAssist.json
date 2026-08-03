@@ -1,266 +1,46 @@
 {
-  "version": "3.1.0-LITE-FIX",
+  "version": "3.2.0-LITE",
+  "mode": "ultra_lite",
   "targetGame": "com.activision.callofduty.shooter",
-  "configType": "lite_optimized",
-  "lastUpdated": "2026-08-02",
-  "author": "Hermes Team",
-  "description": "سبک و بهینه - بدون لگ",
 
-  "performance": {
-    "optimizationLevel": "ultra_lite",
-    "cpuUsage": "minimal",
-    "memoryUsage": "low",
-    "gpuUsage": "minimal",
-    "latencyTarget": 2,
-    "frameRateTarget": 120,
-    "adaptiveQuality": true,
-    "powerSaving": false,
-    "backgroundProcesses": "minimal",
-    "cacheSize": "small",
-    "updateFrequency": "low"
-  },
-
-  "universalAimAssist": {
+  "aimAssist": {
     "enabled": true,
-    "masterStrength": 0.85,
-    "mode": "lite",
-
-    "targetSelection": {
-      "primaryBone": "chest",
-      "secondaryBone": "head",
-      "autoSwitchBone": false,
-      "maxDistance": 500,
-      "minDistance": 0,
-      "teamCheck": true,
-      "visibilityCheck": false,
-      "targetSwitchCooldown": 200,
-      "priorityMode": "damage_first",
-      "stabilityThreshold": 0.3
-    },
-
-    "magnetSystem": {
-      "enabled": true,
-      "pullForce": 0.80,
-      "fovRadius": 60,
-      "deadzone": 0.2,
-      "hipFireAssist": true,
-      "adsAssist": true,
-      "predictionStrength": 0.70,
-      "interpolationMode": "linear",
-      "smoothingAlgorithm": "basic",
-      "pullAcceleration": 1.0,
-      "maxPullSpeed": 3.0,
-      "snapThreshold": 0.5
-    },
-
-    "antiJitterAndRecoil": {
-      "antiJitterEnabled": true,
-      "jitterSmoothing": 0.85,
-      "recoilCompensation": true,
-      "recoilStrength": 0.80,
-      "smoothFactor": 1.3,
-      "microAdjustments": false,
-      "adaptiveSmoothing": false,
-      "recoilPatternMemory": false,
-      "recoilPrediction": false,
-      "verticalRecoil": 0.75,
-      "horizontalRecoil": 0.65,
-      "burstRecoil": 0.70
-    },
-
-    "predictionEngine": {
-      "enabled": true,
-      "pingCompensation": true,
-      "bulletPrediction": false,
-      "movementPrediction": false,
-      "strafePrediction": false,
-      "jumpPrediction": false,
-      "crouchPrediction": false,
-      "slidePrediction": false,
-      "fpsInterpolation": 60,
-      "latencyCompensation": 0.80,
-      "predictionAccuracy": 0.75,
-      "dynamicPrediction": false,
-      "trajectoryCalculation": "simple"
-    },
-
-    "aimLock": {
-      "enabled": true,
-      "lockStrength": 0.85,
-      "lockSpeed": 0.08,
-      "lockDuration": 3000,
-      "lockStickiness": 0.85,
-      "lockMagnetism": 0.90,
-      "lockAdhesion": 0.85,
-      "lockSmoothing": 0.80,
-      "lockJitterReduction": 0.85,
-      "lockMicroAdjust": false,
-      "lockHeadPriority": false,
-      "lockChestFallback": true,
-
-      "lockByDistance": {
-        "pointBlank": {"strength": 0.90, "speed": 0.04},
-        "close": {"strength": 0.85, "speed": 0.06},
-        "mid": {"strength": 0.75, "speed": 0.08},
-        "long": {"strength": 0.60, "speed": 0.12},
-        "extreme": {"strength": 0.40, "speed": 0.15}
-      },
-
-      "lockByWeapon": {
-        "assaultRifle": {"strength": 0.85, "speed": 0.06},
-        "smg": {"strength": 0.88, "speed": 0.04},
-        "sniper": {"strength": 0.60, "speed": 0.10},
-        "shotgun": {"strength": 0.90, "speed": 0.03},
-        "lmg": {"strength": 0.80, "speed": 0.07},
-        "pistol": {"strength": 0.82, "speed": 0.05}
-      },
-
-      "lockByScope": {
-        "redDot": {"strength": 0.88, "speed": 0.05},
-        "holographic": {"strength": 0.86, "speed": 0.05},
-        "acog": {"strength": 0.78, "speed": 0.08},
-        "sniperScope": {"strength": 0.60, "speed": 0.12},
-        "noScope": {"strength": 0.90, "speed": 0.03}
-      },
-
-      "lockModes": {
-        "softLock": {
-          "enabled": true,
-          "strength": 0.65,
-          "speed": 0.10
-        },
-        "hardLock": {
-          "enabled": true,
-          "strength": 0.85,
-          "speed": 0.05
-        },
-        "stickyLock": {
-          "enabled": true,
-          "strength": 0.80,
-          "speed": 0.06
-        }
-      },
-
-      "lockBreakConditions": {
-        "breakOnSmoke": false,
-        "breakOnFlash": false,
-        "breakOnDeath": true,
-        "breakOnWeaponSwitch": true,
-        "breakOnReload": false,
-        "breakOnDistance": true,
-        "breakDistance": 150,
-        "breakOnTeammate": true,
-        "breakOnWall": true
-      }
-    }
+    "strength": 0.80,
+    "fovRadius": 55,
+    "deadzone": 0.25,
+    "pullForce": 0.75,
+    "smoothness": 0.85,
+    "interpolation": "linear",
+    "targetBone": "chest",
+    "maxDistance": 400,
+    "teamCheck": true
   },
 
-  "weaponProfiles": {
-    "autoDetectWeapon": true,
-    "switchDelay": 200,
-
-    "assaultRifle": {
-      "bulletSpeed": 880,
-      "magnetRadius": 45,
-      "smoothness": 1.2,
-      "recoilCompensation": 0.75,
-      "spreadReduction": 0.80,
-      "fireRate": 750,
-      "damageMultiplier": 1.05,
-      "rangeMultiplier": 1.05,
-      "recoilPattern": "vertical_compensate",
-      "aimLock": {"enabled": true, "strength": 0.85, "speed": 0.06}
-    },
-
-    "smg": {
-      "bulletSpeed": 600,
-      "magnetRadius": 60,
-      "smoothness": 0.9,
-      "recoilCompensation": 0.85,
-      "spreadReduction": 0.75,
-      "fireRate": 900,
-      "damageMultiplier": 1.02,
-      "rangeMultiplier": 0.85,
-      "recoilPattern": "circular_compensate",
-      "aimLock": {"enabled": true, "strength": 0.88, "speed": 0.04}
-    },
-
-    "sniper": {
-      "bulletSpeed": 1200,
-      "magnetRadius": 35,
-      "smoothness": 2.0,
-      "recoilCompensation": 0.10,
-      "spreadReduction": 0.90,
-      "fireRate": 40,
-      "damageMultiplier": 1.2,
-      "rangeMultiplier": 1.5,
-      "recoilPattern": "minimal",
-      "aimLock": {"enabled": true, "strength": 0.60, "speed": 0.10}
-    },
-
-    "shotgun": {
-      "bulletSpeed": 450,
-      "magnetRadius": 80,
-      "smoothness": 0.7,
-      "recoilCompensation": 0.90,
-      "spreadReduction": 0.65,
-      "fireRate": 100,
-      "damageMultiplier": 1.15,
-      "rangeMultiplier": 0.65,
-      "recoilPattern": "full_compensate",
-      "aimLock": {"enabled": true, "strength": 0.90, "speed": 0.03}
-    },
-
-    "lmg": {
-      "bulletSpeed": 800,
-      "magnetRadius": 50,
-      "smoothness": 1.6,
-      "recoilCompensation": 0.88,
-      "spreadReduction": 0.82,
-      "fireRate": 650,
-      "damageMultiplier": 1.05,
-      "rangeMultiplier": 1.10,
-      "recoilPattern": "progressive_compensate",
-      "aimLock": {"enabled": true, "strength": 0.80, "speed": 0.07}
-    },
-
-    "pistol": {
-      "bulletSpeed": 500,
-      "magnetRadius": 55,
-      "smoothness": 1.1,
-      "recoilCompensation": 0.70,
-      "spreadReduction": 0.75,
-      "fireRate": 350,
-      "damageMultiplier": 1.0,
-      "rangeMultiplier": 0.75,
-      "recoilPattern": "vertical_compensate",
-      "aimLock": {"enabled": true, "strength": 0.82, "speed": 0.05}
-    }
+  "aimLock": {
+    "enabled": true,
+    "strength": 0.82,
+    "speed": 0.08,
+    "stickiness": 0.85,
+    "duration": 2500,
+    "breakOnDeath": true,
+    "breakOnSwitch": true,
+    "breakOnWall": true
   },
 
-  "advancedFeatures": {
-    "autoHeadshot": {
-      "enabled": true,
-      "priority": 2,
-      "headshotPercentage": 0.70
-    },
-    "bulletPenetration": {
-      "enabled": false,
-      "wallbangAssist": false
-    },
-    "targetLock": {
-      "enabled": true,
-      "lockStrength": 0.85,
-      "lockDuration": 2000,
-      "breakOnSmoke": false,
-      "breakOnFlash": false
-    },
-    "movementAssist": {
-      "strafeAim": true,
-      "jumpShot": true,
-      "dropShot": false,
-      "slideCancel": false,
-      "movementPrediction": false
-    }
+  "recoil": {
+    "enabled": true,
+    "vertical": 0.75,
+    "horizontal": 0.65,
+    "smoothing": 0.88,
+    "microAdjust": false,
+    "prediction": false
+  },
+
+  "prediction": {
+    "enabled": true,
+    "pingComp": true,
+    "bulletPredict": false,
+    "movementPredict": false,
+    "fps": 60
   }
 }
