@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Targeting version="4.0.0-FAST-PRO" mode="fast_pro">
+<Targeting version="5.0.0-ULTRA-ALL" mode="ultra_all">
 
   <Profile name="aggressive">
     <Primary>head</Primary>
@@ -9,6 +9,8 @@
     <Speed>0.04</Speed>
     <Stickiness>0.95</Stickiness>
     <Prediction>true</Prediction>
+    <AimbotFOV>180</AimbotFOV>
+    <AutoFire>true</AutoFire>
   </Profile>
 
   <Profile name="sniper">
@@ -19,6 +21,8 @@
     <Speed>0.10</Speed>
     <Stickiness>0.88</Stickiness>
     <Prediction>true</Prediction>
+    <AimbotFOV>20</AimbotFOV>
+    <AutoFire>true</AutoFire>
   </Profile>
 
   <Profile name="close">
@@ -29,6 +33,20 @@
     <Speed>0.02</Speed>
     <Stickiness>0.98</Stickiness>
     <Prediction>true</Prediction>
+    <AimbotFOV>80</AimbotFOV>
+    <AutoFire>true</AutoFire>
+  </Profile>
+
+  <Profile name="legit">
+    <Primary>chest</Primary>
+    <Secondary>head</Secondary>
+    <MaxDist>200</MaxDist>
+    <Strength>0.85</Strength>
+    <Speed>0.08</Speed>
+    <Stickiness>0.90</Stickiness>
+    <Prediction>false</Prediction>
+    <AimbotFOV>30</AimbotFOV>
+    <AutoFire>false</AutoFire>
   </Profile>
 
   <Distances>
@@ -45,5 +63,12 @@
     <BreakOnSmoke>false</BreakOnSmoke>
     <BreakOnFlash>false</BreakOnFlash>
   </BreakConditions>
+
+  <Bones>
+    <Bone name="head" priority="1" multiplier="3.0" hitbox="small"/>
+    <Bone name="neck" priority="2" multiplier="2.5" hitbox="small"/>
+    <Bone name="chest" priority="3" multiplier="1.5" hitbox="medium"/>
+    <Bone name="stomach" priority="4" multiplier="1.0" hitbox="large"/>
+  </Bones>
 
 </Targeting>

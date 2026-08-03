@@ -1,6 +1,6 @@
 {
-  "version": "4.0.0-FAST-PRO",
-  "mode": "fast_pro",
+  "version": "5.0.0-ULTRA-ALL",
+  "mode": "ultra_all",
 
   "magicBullet": {
     "enabled": true,
@@ -8,11 +8,20 @@
     "accuracy": 99.5,
     "headshotMulti": 3.0,
     "bodyMulti": 1.5,
+    "limbMulti": 1.0,
     "penetration": true,
     "maxWalls": 3,
     "wallDamage": 0.80,
+    "materialPenetration": {
+      "wood": 100,
+      "metal": 80,
+      "concrete": 60,
+      "glass": 100,
+      "dirt": 90
+    },
     "bulletSpeed": 9999,
     "bulletDrop": 0,
+    "bulletGravity": 0,
     "range": 999,
     "fireRate": 999,
     "reloadSpeed": 0.1,

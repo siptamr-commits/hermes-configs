@@ -1,7 +1,8 @@
 {
-  "version": "4.1.0-FAST-PRO-AIMBOT",
-  "mode": "fast_pro_aimbot",
+  "version": "5.0.0-ULTRA-ALL",
+  "mode": "ultra_all",
   "targetGame": "com.activision.callofduty.shooter",
+  "lastUpdated": "2026-08-03",
 
   "aimAssist": {
     "enabled": true,
@@ -36,69 +37,60 @@
 
   "aimbot": {
     "enabled": true,
-    "mode": "silent",
-
-    "targeting": {
-      "autoTarget": true,
-      "targetSwitch": 50,
-      "priorityMode": "headshot",
-      "boneOrder": ["head", "neck", "chest", "stomach"],
-      "visibleOnly": true,
-      "teamCheck": true,
-      "knockedCheck": true
+    "settings": {
+      "fov": 180,
+      "smoothing": 0.88,
+      "aimSpeed": 0.95,
+      "targetBone": "head",
+      "maxDistance": 600,
+      "autoFire": true,
+      "triggerbot": true,
+      "silentAim": true
     },
-
+    "bones": {
+      "head": {"priority": 1, "multiplier": 3.0, "hitbox": "small"},
+      "neck": {"priority": 2, "multiplier": 2.5, "hitbox": "small"},
+      "chest": {"priority": 3, "multiplier": 1.5, "hitbox": "medium"},
+      "stomach": {"priority": 4, "multiplier": 1.0, "hitbox": "large"}
+    },
+    "modes": {
+      "legit": {"fov": 30, "smoothing": 0.92, "aimSpeed": 0.85, "targetBone": "chest"},
+      "rage": {"fov": 180, "smoothing": 0.50, "aimSpeed": 1.0, "targetBone": "head"},
+      "silent": {"fov": 180, "accuracy": 99.9, "targetBone": "head"},
+      "triggerbot": {"fov": 3, "delay": 5, "reactionTime": 10}
+    },
+    "targeting": {
+      "priorityMode": "distance",
+      "boneOrder": ["head", "neck", "chest"],
+      "visibleOnly": true,
+      "teamCheck": true
+    },
     "firing": {
       "autoFire": true,
       "autoFireDelay": 10,
-      "fireMode": "triggerbot",
-      "triggerbotFOV": 3,
-      "triggerbotDelay": 5,
-      "burstFire": false,
-      "burstCount": 3,
-      "burstDelay": 50
+      "fireMode": "auto",
+      "headshotOnly": false
     },
-
-    "smoothing": {
-      "enabled": true,
-      "aimSpeed": 0.95,
-      "smoothingFactor": 0.88,
-      "jitterReduction": 0.92,
-      "recoilSmoothing": 0.90
-    },
-
     "silentAim": {
       "enabled": true,
       "silentAimFOV": 180,
       "silentAimBone": "head",
       "silentAimAccuracy": 99.9,
-      "visualRecoil": true
+      "bulletRedirect": true
     },
-
     "triggerbot": {
       "enabled": true,
       "fov": 3,
       "delay": 5,
-      "reactionTime": 10,
-      "humanized": false,
-      "targetLock": true
+      "autoShoot": true
     },
-
-    "antiaim": {
-      "enabled": false,
-      "spinBot": false,
-      "jitter": false,
-      "reverse": false
-    },
-
     "misc": {
       "autoShot": true,
       "autoHeadshot": true,
       "noSpread": true,
       "noRecoil": true,
       "infiniteAmmo": true,
-      "instantReload": false,
-      "rapidFire": false
+      "wallbang": true
     }
   },
 

@@ -1,10 +1,9 @@
 {
-  "version": "4.1.0-FAST-PRO-AIMBOT",
-  "mode": "fast_pro_aimbot",
+  "version": "5.0.0-ULTRA-ALL",
+  "mode": "ultra_all",
 
   "aimbot": {
     "enabled": true,
-
     "settings": {
       "fov": 180,
       "smoothing": 0.88,
@@ -111,14 +110,6 @@
       "autoShoot": true
     },
 
-    "anticheat": {
-      "humanization": false,
-      "randomDelay": false,
-      "aimVariance": 0,
-      "timingVariance": 0,
-      "statVariation": false
-    },
-
     "misc": {
       "autoShot": true,
       "autoHeadshot": true,
@@ -127,22 +118,20 @@
       "infiniteAmmo": true,
       "instantReload": false,
       "rapidFire": false,
-      "wallbang": true,
-      "esp": false,
-      "radar": false
+      "wallbang": true
     }
   },
 
   "weaponProfiles": {
-    "M4A1": {"type": "ar", "aimbotFOV": 40, "smoothing": 0.90, "bone": "head"},
-    "AK47": {"type": "ar", "aimbotFOV": 45, "smoothing": 0.88, "bone": "head"},
-    "MP5": {"type": "smg", "aimbotFOV": 60, "smoothing": 0.85, "bone": "chest"},
-    "FENNEC": {"type": "smg", "aimbotFOV": 65, "smoothing": 0.83, "bone": "chest"},
-    "AWM": {"type": "sniper", "aimbotFOV": 20, "smoothing": 0.98, "bone": "head"},
-    "DLQ33": {"type": "sniper", "aimbotFOV": 20, "smoothing": 0.98, "bone": "head"},
-    "SPAS12": {"type": "shotgun", "aimbotFOV": 80, "smoothing": 0.80, "bone": "chest"},
-    "RPD": {"type": "lmg", "aimbotFOV": 35, "smoothing": 0.92, "bone": "head"},
-    "PHANTOM": {"type": "marksman", "aimbotFOV": 25, "smoothing": 0.96, "bone": "head"},
-    "G37": {"type": "ar", "aimbotFOV": 40, "smoothing": 0.90, "bone": "head"}
+    "M4A1": {"type": "ar", "aimbotFOV": 40, "smoothing": 0.90, "bone": "head", "recoilV": 0.90, "recoilH": 0.80},
+    "AK47": {"type": "ar", "aimbotFOV": 45, "smoothing": 0.88, "bone": "head", "recoilV": 0.88, "recoilH": 0.75},
+    "MP5": {"type": "smg", "aimbotFOV": 60, "smoothing": 0.85, "bone": "chest", "recoilV": 0.92, "recoilH": 0.85},
+    "FENNEC": {"type": "smg", "aimbotFOV": 65, "smoothing": 0.83, "bone": "chest", "recoilV": 0.93, "recoilH": 0.87},
+    "AWM": {"type": "sniper", "aimbotFOV": 20, "smoothing": 0.98, "bone": "head", "recoilV": 0.15, "recoilH": 0.10},
+    "DLQ33": {"type": "sniper", "aimbotFOV": 20, "smoothing": 0.98, "bone": "head", "recoilV": 0.12, "recoilH": 0.08},
+    "SPAS12": {"type": "shotgun", "aimbotFOV": 80, "smoothing": 0.80, "bone": "chest", "recoilV": 0.95, "recoilH": 0.90},
+    "RPD": {"type": "lmg", "aimbotFOV": 35, "smoothing": 0.92, "bone": "head", "recoilV": 0.88, "recoilH": 0.75},
+    "PHANTOM": {"type": "marksman", "aimbotFOV": 25, "smoothing": 0.96, "bone": "head", "recoilV": 0.35, "recoilH": 0.25},
+    "G37": {"type": "ar", "aimbotFOV": 40, "smoothing": 0.90, "bone": "head", "recoilV": 0.89, "recoilH": 0.77}
   }
 }
