@@ -1,19 +1,36 @@
-# ⚡ Hermes Advanced Configs v2.0
+# ⚡ Hermes Advanced Configs v3.1.0 — LITE FIX
 
-نسخه بهینه و قوی‌تر از کانفیگ‌های اصلی
+نسخه سبک و بهینه - بدون لگ!
 
-## 📊 مقایسه
+## 🔧 مشکل لگ حل شد!
 
-| ویژگی | نسخه اصلی | نسخه Hermes v2.0 |
+### تغییرات نسبت به v3.0
+
+| مورد | v3.0 (قدیم) | v3.1.0 (جدید) |
 |---|---|---|
-| **Aim Assist** | پایه | ✅ Ultra Aggressive |
-| **پیش‌بینی حرکت** | ❌ | ✅ پیشرفته |
-| **الگوی Recoil** | ۵ اسلحه | ✅ ۷ اسلحه |
-| **حالت‌های تیر** | ۳ | ✅ ۱۲+ |
-| **پروفایل هدف** | ۱ | ✅ ۴ پروفایل |
-| **تنظیمات Scope** | پایه | ✅ پیشرفته |
-| **سنسیتیویتی** | ۱۰ تنظیم | ✅ ۳۰+ تنظیم |
-| **ضد تشخیص** | ❌ | ✅ Humanization |
+| **CPU Usage** | high | minimal ✅ |
+| **Memory** | moderate | low ✅ |
+| **GPU** | moderate | minimal ✅ |
+| **FPS Target** | 144 | 60-120 ✅ |
+| **Algorithm** | complex | simple ✅ |
+| **Micro Adjustments** | enabled | disabled ✅ |
+| **Adaptive Smoothing** | enabled | disabled ✅ |
+| **Recoil Prediction** | enabled | disabled ✅ |
+| **Movement Prediction** | enabled | disabled ✅ |
+| **Interpolation** | cubic | linear ✅ |
+| **Lock Strength** | 0.98 | 0.85 ✅ |
+| **FOV Radius** | 75 | 60 ✅ |
+| **Max Distance** | 9999 | 500 ✅ |
+
+### چرا لگ می‌خورد؟
+
+| دلیل | راه‌حل |
+|---|---|
+| CPU سنگین | ✅ الگوریتم ساده |
+| Memory زیاد | ✅ کش کوچکتر |
+| GPU سنگین | ✅ کیفیت پایین‌تر |
+| FPS پایین | ✅ هدف 60-120 |
+| محاسبات زیاد | ✅ غیرفعال کردن |
 
 ---
 
@@ -21,47 +38,36 @@
 
 | فایل | توضیح |
 |---|---|
-| `UniversalAimAssist.json` | تنظیمات کامل Aim Assist |
-| `MagicBulletAdvanced.json` | Magic Bullet پیشرفته |
-| `RecoilPatterns.json` | الگوهای Recoil اسلحه‌ها |
-| `SensitivityConfig.ini` | تنظیمات حساسیت |
-| `TargetingProfiles.xml` | پروفایل‌های هدف‌گیری |
-| `SniperScopeAdvanced.ini` | تنظیمات دوربین |
-| `FireModePresetsAdvanced.json` | حالت‌های تیراندازی |
+| `UniversalAimAssist.json` | Aim Assist + AimLock سبک |
+| `MagicBulletAdvanced.json` | Magic Bullet |
+| `RecoilPatterns.json` | الگوی Recoil |
+| `SensitivityConfig.ini` | حساسیت |
+| `TargetingProfiles.xml` | پروفایل هدف |
+| `SniperScopeAdvanced.ini` | دوربین |
+| `FireModePresetsAdvanced.json` | حالت تیر |
 
 ---
 
-## 🔧 قابلیت‌های جدید
+## 🎯 قابلیت‌ها
 
-### ۱. Aim Assist Ultra
-- پیش‌بینی حرکت با الگوریتم Kalman
-- تشخیص خودکار اسلحه
-- ۴ پروفایل هدف (aggressive, defensive, sniper, close_range)
+### Aim Assist (سبک)
+- ✅ هدف‌گیری خودکار
+- ✅ جبران Recoil
+- ✅ پیش‌بینی پایه
+- ❌ پیش‌بینی پیشرفته (غیرفعال)
+- ❌ الگوریتم پیچیده (غیرفعال)
 
-### ۲. Recoil Control
-- ۷ اسلحه با الگوی دقیق
-- جبران عمودی و افقی
-- کنترل Burst و Spray
-
-### ۳. Magic Bullet
-- نفوذ دیوار (۳ لایه)
-- آسیب ۹۹۹
-- دقت ۹۹.۹٪
-- پیش‌بینی گلوله
-
-### ۴. Sniper Scope
-- زوم پویا (۱x-۱۲x)
-- کاهش لرزش ۹۵٪
-- دید حرارتی و شب
-
-### ۵. Anti-Detection
-- Humanization پیشرفته
-- تاخیر تصادفی
-- تنوع در آمار
+### AimLock (سبک)
+- ✅ ۳ حالت قفل
+- ✅ قفل بر اساس اسلحه
+- ✅ قفل بر اساس Scope
+- ✅ قفل بر اساس فاصله
+- ❌ ۶ حالت پیشرفته (غیرفعال)
+- ❌ Adaptive Lock (غیرفعال)
 
 ---
 
-## 📱 نحوه استفاده
+## 🚀 نحوه استفاده
 
 ### ترمکس:
 ```bash
@@ -75,10 +81,12 @@ python3 recoil_engine.py
 
 ---
 
-## ⚠️ هشدار
+## ⚠️ نکات مهم
 
-این کانفیگ‌ها برای **استفاده آموزشی** هستن. استفاده از اونها در بازی‌ها ممکنه منجر به بن اکانت بشه.
+1. **این نسخه سبکه** - قابلیت‌های کمتر ولی بدون لگ
+2. **بدون انسانی‌سازی** - قفل مستقیم
+3. **بهینه شده** - برای گوشی‌های ضعیف
 
 ---
 
-**ساخته شده توسط Hermes Team ❤️**
+**نسخه سبک و بهینه آماده است! 🚀**
