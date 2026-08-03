@@ -1,41 +1,43 @@
 {
-  "version": "5.0.0-ULTRA-ALL",
-  "mode": "ultra_all",
+  "version": "6.0.0-MAX-POWER",
+  "mode": "max_power",
+  "power": "100%",
 
   "fireModes": {
     "ar": {
-      "single": {"rate": 450, "recoil": 0.92, "accuracy": 99.5, "aimbotFOV": 40},
-      "burst": {"rate": 780, "burst": 3, "recoil": 0.88, "accuracy": 99, "aimbotFOV": 40},
-      "auto": {"rate": 820, "recoil": 0.85, "accuracy": 98, "aimbotFOV": 40}
+      "single": {"rate": 99999, "recoil": 1.0, "accuracy": 100, "aimbotFOV": 360},
+      "burst": {"rate": 99999, "burst": 999, "recoil": 1.0, "accuracy": 100, "aimbotFOV": 360},
+      "auto": {"rate": 99999, "recoil": 1.0, "accuracy": 100, "aimbotFOV": 360}
     },
     "smg": {
-      "auto": {"rate": 1050, "recoil": 0.90, "accuracy": 97, "aimbotFOV": 60}
+      "auto": {"rate": 99999, "recoil": 1.0, "accuracy": 100, "aimbotFOV": 360}
     },
     "sniper": {
-      "bolt": {"rate": 55, "recoil": 0.18, "accuracy": 99.5, "aimbotFOV": 20}
+      "bolt": {"rate": 99999, "recoil": 1.0, "accuracy": 100, "aimbotFOV": 360}
     },
     "shotgun": {
-      "pump": {"rate": 90, "recoil": 0.96, "accuracy": 94, "aimbotFOV": 80}
+      "pump": {"rate": 99999, "recoil": 1.0, "accuracy": 100, "aimbotFOV": 360}
     },
     "lmg": {
-      "auto": {"rate": 720, "recoil": 0.88, "accuracy": 96, "aimbotFOV": 35}
+      "auto": {"rate": 99999, "recoil": 1.0, "accuracy": 100, "aimbotFOV": 360}
     }
   },
 
   "weaponStats": {
-    "damageMulti": 10.0,
-    "headMulti": 3.0,
-    "rangeMulti": 10.0,
-    "fireRateMulti": 2.0,
-    "reloadMulti": 5.0,
-    "accuracyMulti": 10.0
+    "damageMulti": 99.0,
+    "headMulti": 99.0,
+    "rangeMulti": 99.0,
+    "fireRateMulti": 99.0,
+    "reloadMulti": 99.0,
+    "accuracyMulti": 99.0
   },
 
   "aimbot": {
     "autoFire": true,
     "triggerbot": true,
     "silentAim": true,
-    "headshotPriority": true,
-    "wallbang": true
+    "headshotOnly": true,
+    "wallbang": true,
+    "autoWallbang": true
   }
 }

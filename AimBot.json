@@ -1,111 +1,80 @@
 {
-  "version": "5.0.0-ULTRA-ALL",
-  "mode": "ultra_all",
+  "version": "6.0.0-MAX-POWER",
+  "mode": "max_power",
+  "power": "100%",
 
   "aimbot": {
     "enabled": true,
     "settings": {
-      "fov": 180,
-      "smoothing": 0.88,
-      "aimSpeed": 0.95,
+      "fov": 360,
+      "smoothing": 0.01,
+      "aimSpeed": 1.0,
       "targetBone": "head",
-      "maxDistance": 600,
+      "maxDistance": 9999,
       "autoFire": true,
       "triggerbot": true,
       "silentAim": true
     },
 
     "bones": {
-      "head": {"priority": 1, "multiplier": 3.0, "hitbox": "small"},
-      "neck": {"priority": 2, "multiplier": 2.5, "hitbox": "small"},
-      "chest": {"priority": 3, "multiplier": 1.5, "hitbox": "medium"},
-      "stomach": {"priority": 4, "multiplier": 1.0, "hitbox": "large"},
-      "leftArm": {"priority": 5, "multiplier": 0.8, "hitbox": "medium"},
-      "rightArm": {"priority": 6, "multiplier": 0.8, "hitbox": "medium"},
-      "leftLeg": {"priority": 7, "multiplier": 0.7, "hitbox": "large"},
-      "rightLeg": {"priority": 8, "multiplier": 0.7, "hitbox": "large"}
+      "head": {"priority": 1, "multiplier": 99.0, "hitbox": "small"},
+      "neck": {"priority": 2, "multiplier": 99.0, "hitbox": "small"},
+      "chest": {"priority": 3, "multiplier": 99.0, "hitbox": "medium"},
+      "stomach": {"priority": 4, "multiplier": 99.0, "hitbox": "large"},
+      "leftArm": {"priority": 5, "multiplier": 99.0, "hitbox": "medium"},
+      "rightArm": {"priority": 6, "multiplier": 99.0, "hitbox": "medium"},
+      "leftLeg": {"priority": 7, "multiplier": 99.0, "hitbox": "large"},
+      "rightLeg": {"priority": 8, "multiplier": 99.0, "hitbox": "large"}
     },
 
     "modes": {
-      "legit": {
-        "enabled": true,
-        "fov": 30,
-        "smoothing": 0.92,
-        "aimSpeed": 0.85,
-        "maxDistance": 200,
-        "targetBone": "chest",
-        "autoFire": false,
-        "triggerbot": true
-      },
-      "rage": {
-        "enabled": true,
-        "fov": 180,
-        "smoothing": 0.50,
-        "aimSpeed": 1.0,
-        "maxDistance": 600,
-        "targetBone": "head",
-        "autoFire": true,
-        "triggerbot": true
-      },
-      "silent": {
-        "enabled": true,
-        "fov": 180,
-        "accuracy": 99.9,
-        "targetBone": "head",
-        "visualRecoil": true
-      },
-      "triggerbot": {
-        "enabled": true,
-        "fov": 3,
-        "delay": 5,
-        "reactionTime": 10,
-        "targetLock": true
-      }
+      "legit": {"fov": 360, "smoothing": 0.01, "aimSpeed": 1.0, "targetBone": "head", "autoFire": true, "triggerbot": true},
+      "rage": {"fov": 360, "smoothing": 0.01, "aimSpeed": 1.0, "targetBone": "head", "autoFire": true, "triggerbot": true},
+      "silent": {"fov": 360, "accuracy": 100, "targetBone": "head", "visualRecoil": false},
+      "triggerbot": {"fov": 360, "delay": 0, "reactionTime": 0, "targetLock": true}
     },
 
     "targeting": {
-      "priorityMode": "distance",
-      "boneOrder": ["head", "neck", "chest"],
-      "visibleOnly": true,
+      "priorityMode": "headshot",
+      "boneOrder": ["head", "neck", "chest", "stomach"],
+      "visibleOnly": false,
       "teamCheck": true,
-      "knockedCheck": true,
-      "throughSmoke": false,
-      "throughFlash": false
+      "knockedCheck": false,
+      "throughSmoke": true,
+      "throughFlash": true,
+      "throughWall": true
     },
 
     "firing": {
       "autoFire": true,
-      "autoFireDelay": 10,
+      "autoFireDelay": 0,
       "fireMode": "auto",
-      "burstFire": false,
-      "burstCount": 3,
-      "burstDelay": 50,
-      "headshotOnly": false
+      "headshotOnly": true
     },
 
     "smoothing": {
-      "enabled": true,
-      "aimSpeed": 0.95,
-      "smoothingFactor": 0.88,
-      "jitterReduction": 0.92,
-      "recoilSmoothing": 0.90,
+      "enabled": false,
+      "aimSpeed": 1.0,
+      "smoothingFactor": 0.01,
+      "jitterReduction": 1.0,
+      "recoilSmoothing": 1.0,
       "microAdjust": true
     },
 
     "silentAim": {
       "enabled": true,
-      "silentAimFOV": 180,
+      "silentAimFOV": 360,
       "silentAimBone": "head",
-      "silentAimAccuracy": 99.9,
-      "visualRecoil": true,
+      "silentAimAccuracy": 100,
+      "visualRecoil": false,
       "bulletRedirect": true
     },
 
     "triggerbot": {
       "enabled": true,
-      "fov": 3,
-      "delay": 5,
-      "reactionTime": 10,
+      "fov": 360,
+      "delay": 0,
+      "reactionTime": 0,
       "targetLock": true,
       "autoShoot": true
     },
@@ -116,22 +85,23 @@
       "noSpread": true,
       "noRecoil": true,
       "infiniteAmmo": true,
-      "instantReload": false,
-      "rapidFire": false,
-      "wallbang": true
+      "instantReload": true,
+      "rapidFire": true,
+      "wallbang": true,
+      "autoWallbang": true
     }
   },
 
   "weaponProfiles": {
-    "M4A1": {"type": "ar", "aimbotFOV": 40, "smoothing": 0.90, "bone": "head", "recoilV": 0.90, "recoilH": 0.80},
-    "AK47": {"type": "ar", "aimbotFOV": 45, "smoothing": 0.88, "bone": "head", "recoilV": 0.88, "recoilH": 0.75},
-    "MP5": {"type": "smg", "aimbotFOV": 60, "smoothing": 0.85, "bone": "chest", "recoilV": 0.92, "recoilH": 0.85},
-    "FENNEC": {"type": "smg", "aimbotFOV": 65, "smoothing": 0.83, "bone": "chest", "recoilV": 0.93, "recoilH": 0.87},
-    "AWM": {"type": "sniper", "aimbotFOV": 20, "smoothing": 0.98, "bone": "head", "recoilV": 0.15, "recoilH": 0.10},
-    "DLQ33": {"type": "sniper", "aimbotFOV": 20, "smoothing": 0.98, "bone": "head", "recoilV": 0.12, "recoilH": 0.08},
-    "SPAS12": {"type": "shotgun", "aimbotFOV": 80, "smoothing": 0.80, "bone": "chest", "recoilV": 0.95, "recoilH": 0.90},
-    "RPD": {"type": "lmg", "aimbotFOV": 35, "smoothing": 0.92, "bone": "head", "recoilV": 0.88, "recoilH": 0.75},
-    "PHANTOM": {"type": "marksman", "aimbotFOV": 25, "smoothing": 0.96, "bone": "head", "recoilV": 0.35, "recoilH": 0.25},
-    "G37": {"type": "ar", "aimbotFOV": 40, "smoothing": 0.90, "bone": "head", "recoilV": 0.89, "recoilH": 0.77}
+    "M4A1": {"type": "ar", "aimbotFOV": 360, "smoothing": 0.01, "bone": "head", "recoilV": 1.0, "recoilH": 1.0},
+    "AK47": {"type": "ar", "aimbotFOV": 360, "smoothing": 0.01, "bone": "head", "recoilV": 1.0, "recoilH": 1.0},
+    "MP5": {"type": "smg", "aimbotFOV": 360, "smoothing": 0.01, "bone": "head", "recoilV": 1.0, "recoilH": 1.0},
+    "FENNEC": {"type": "smg", "aimbotFOV": 360, "smoothing": 0.01, "bone": "head", "recoilV": 1.0, "recoilH": 1.0},
+    "AWM": {"type": "sniper", "aimbotFOV": 360, "smoothing": 0.01, "bone": "head", "recoilV": 1.0, "recoilH": 1.0},
+    "DLQ33": {"type": "sniper", "aimbotFOV": 360, "smoothing": 0.01, "bone": "head", "recoilV": 1.0, "recoilH": 1.0},
+    "SPAS12": {"type": "shotgun", "aimbotFOV": 360, "smoothing": 0.01, "bone": "head", "recoilV": 1.0, "recoilH": 1.0},
+    "RPD": {"type": "lmg", "aimbotFOV": 360, "smoothing": 0.01, "bone": "head", "recoilV": 1.0, "recoilH": 1.0},
+    "PHANTOM": {"type": "marksman", "aimbotFOV": 360, "smoothing": 0.01, "bone": "head", "recoilV": 1.0, "recoilH": 1.0},
+    "G37": {"type": "ar", "aimbotFOV": 360, "smoothing": 0.01, "bone": "head", "recoilV": 1.0, "recoilH": 1.0}
   }
 }

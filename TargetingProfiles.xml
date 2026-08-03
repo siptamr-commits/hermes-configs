@@ -1,74 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Targeting version="5.0.0-ULTRA-ALL" mode="ultra_all">
+<Targeting version="6.0.0-MAX-POWER" mode="max_power" power="100%">
 
-  <Profile name="aggressive">
+  <Profile name="absolute">
     <Primary>head</Primary>
-    <Secondary>chest</Secondary>
-    <MaxDist>600</MaxDist>
-    <Strength>0.95</Strength>
-    <Speed>0.04</Speed>
-    <Stickiness>0.95</Stickiness>
-    <Prediction>true</Prediction>
-    <AimbotFOV>180</AimbotFOV>
-    <AutoFire>true</AutoFire>
-  </Profile>
-
-  <Profile name="sniper">
-    <Primary>head</Primary>
-    <Secondary>neck</Secondary>
-    <MaxDist>999</MaxDist>
-    <Strength>0.75</Strength>
-    <Speed>0.10</Speed>
-    <Stickiness>0.88</Stickiness>
-    <Prediction>true</Prediction>
-    <AimbotFOV>20</AimbotFOV>
-    <AutoFire>true</AutoFire>
-  </Profile>
-
-  <Profile name="close">
-    <Primary>chest</Primary>
     <Secondary>head</Secondary>
-    <MaxDist>25</MaxDist>
-    <Strength>0.98</Strength>
-    <Speed>0.02</Speed>
-    <Stickiness>0.98</Stickiness>
+    <MaxDist>9999</MaxDist>
+    <Strength>1.0</Strength>
+    <Speed>0.01</Speed>
+    <Stickiness>1.0</Stickiness>
     <Prediction>true</Prediction>
-    <AimbotFOV>80</AimbotFOV>
+    <AimbotFOV>360</AimbotFOV>
     <AutoFire>true</AutoFire>
-  </Profile>
-
-  <Profile name="legit">
-    <Primary>chest</Primary>
-    <Secondary>head</Secondary>
-    <MaxDist>200</MaxDist>
-    <Strength>0.85</Strength>
-    <Speed>0.08</Speed>
-    <Stickiness>0.90</Stickiness>
-    <Prediction>false</Prediction>
-    <AimbotFOV>30</AimbotFOV>
-    <AutoFire>false</AutoFire>
   </Profile>
 
   <Distances>
-    <Close max="10" strength="0.98" speed="0.02"/>
-    <Mid max="30" strength="0.92" speed="0.05"/>
-    <Long max="60" strength="0.80" speed="0.08"/>
-    <Extreme max="999" strength="0.60" speed="0.12"/>
+    <Close max="9999" strength="1.0" speed="0.01"/>
   </Distances>
 
   <BreakConditions>
-    <BreakOnDeath>true</BreakOnDeath>
-    <BreakOnSwitch>true</BreakOnSwitch>
-    <BreakOnWall>true</BreakOnWall>
+    <BreakOnDeath>false</BreakOnDeath>
+    <BreakOnSwitch>false</BreakOnSwitch>
+    <BreakOnWall>false</BreakOnWall>
     <BreakOnSmoke>false</BreakOnSmoke>
     <BreakOnFlash>false</BreakOnFlash>
   </BreakConditions>
 
   <Bones>
-    <Bone name="head" priority="1" multiplier="3.0" hitbox="small"/>
-    <Bone name="neck" priority="2" multiplier="2.5" hitbox="small"/>
-    <Bone name="chest" priority="3" multiplier="1.5" hitbox="medium"/>
-    <Bone name="stomach" priority="4" multiplier="1.0" hitbox="large"/>
+    <Bone name="head" priority="1" multiplier="99.0" hitbox="small"/>
+    <Bone name="neck" priority="2" multiplier="99.0" hitbox="small"/>
+    <Bone name="chest" priority="3" multiplier="99.0" hitbox="medium"/>
+    <Bone name="stomach" priority="4" multiplier="99.0" hitbox="large"/>
   </Bones>
 
 </Targeting>

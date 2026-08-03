@@ -1,36 +1,41 @@
 {
-  "version": "5.0.0-ULTRA-ALL",
-  "mode": "ultra_all",
+  "version": "6.0.0-MAX-POWER",
+  "mode": "max_power",
   "targetGame": "com.activision.callofduty.shooter",
   "lastUpdated": "2026-08-03",
+  "power": "100%",
 
   "aimAssist": {
     "enabled": true,
-    "strength": 0.95,
-    "fovRadius": 70,
-    "deadzone": 0.15,
-    "pullForce": 0.92,
-    "smoothness": 0.90,
+    "strength": 1.0,
+    "fovRadius": 90,
+    "deadzone": 0.01,
+    "pullForce": 1.0,
+    "smoothness": 1.0,
     "interpolation": "linear",
     "targetBone": "head",
-    "maxDistance": 600,
+    "maxDistance": 9999,
     "teamCheck": true,
     "prediction": true,
-    "predictionStrength": 0.80
+    "predictionStrength": 1.0
   },
 
   "aimLock": {
     "enabled": true,
-    "strength": 0.95,
-    "speed": 0.04,
-    "stickiness": 0.95,
-    "duration": 4000,
-    "breakOnDeath": true,
-    "breakOnSwitch": true,
-    "breakOnWall": true,
+    "strength": 1.0,
+    "speed": 0.01,
+    "stickiness": 1.0,
+    "duration": 99999,
+    "breakOnDeath": false,
+    "breakOnSwitch": false,
+    "breakOnWall": false,
+    "breakOnSmoke": false,
+    "breakOnFlash": false,
+    "breakOnStun": false,
+    "breakOnTeammate": false,
     "modes": {
-      "soft": {"strength": 0.70, "speed": 0.08},
-      "hard": {"strength": 0.95, "speed": 0.03},
+      "soft": {"strength": 1.0, "speed": 0.01},
+      "hard": {"strength": 1.0, "speed": 0.01},
       "snap": {"strength": 1.0, "speed": 0.01}
     }
   },
@@ -38,50 +43,72 @@
   "aimbot": {
     "enabled": true,
     "settings": {
-      "fov": 180,
-      "smoothing": 0.88,
-      "aimSpeed": 0.95,
+      "fov": 360,
+      "smoothing": 0.01,
+      "aimSpeed": 1.0,
       "targetBone": "head",
-      "maxDistance": 600,
+      "maxDistance": 9999,
       "autoFire": true,
       "triggerbot": true,
       "silentAim": true
     },
     "bones": {
-      "head": {"priority": 1, "multiplier": 3.0, "hitbox": "small"},
-      "neck": {"priority": 2, "multiplier": 2.5, "hitbox": "small"},
-      "chest": {"priority": 3, "multiplier": 1.5, "hitbox": "medium"},
-      "stomach": {"priority": 4, "multiplier": 1.0, "hitbox": "large"}
+      "head": {"priority": 1, "multiplier": 99.0, "hitbox": "small"},
+      "neck": {"priority": 2, "multiplier": 99.0, "hitbox": "small"},
+      "chest": {"priority": 3, "multiplier": 99.0, "hitbox": "medium"},
+      "stomach": {"priority": 4, "multiplier": 99.0, "hitbox": "large"},
+      "leftArm": {"priority": 5, "multiplier": 99.0, "hitbox": "medium"},
+      "rightArm": {"priority": 6, "multiplier": 99.0, "hitbox": "medium"},
+      "leftLeg": {"priority": 7, "multiplier": 99.0, "hitbox": "large"},
+      "rightLeg": {"priority": 8, "multiplier": 99.0, "hitbox": "large"}
     },
     "modes": {
-      "legit": {"fov": 30, "smoothing": 0.92, "aimSpeed": 0.85, "targetBone": "chest"},
-      "rage": {"fov": 180, "smoothing": 0.50, "aimSpeed": 1.0, "targetBone": "head"},
-      "silent": {"fov": 180, "accuracy": 99.9, "targetBone": "head"},
-      "triggerbot": {"fov": 3, "delay": 5, "reactionTime": 10}
+      "legit": {"fov": 360, "smoothing": 0.01, "aimSpeed": 1.0, "targetBone": "head"},
+      "rage": {"fov": 360, "smoothing": 0.01, "aimSpeed": 1.0, "targetBone": "head"},
+      "silent": {"fov": 360, "accuracy": 100, "targetBone": "head"},
+      "triggerbot": {"fov": 360, "delay": 0, "reactionTime": 0}
     },
     "targeting": {
-      "priorityMode": "distance",
-      "boneOrder": ["head", "neck", "chest"],
-      "visibleOnly": true,
-      "teamCheck": true
+      "priorityMode": "headshot",
+      "boneOrder": ["head", "neck", "chest", "stomach"],
+      "visibleOnly": false,
+      "teamCheck": true,
+      "knockedCheck": false,
+      "throughSmoke": true,
+      "throughFlash": true,
+      "throughWall": true
     },
     "firing": {
       "autoFire": true,
-      "autoFireDelay": 10,
+      "autoFireDelay": 0,
       "fireMode": "auto",
-      "headshotOnly": false
+      "burstFire": false,
+      "burstCount": 999,
+      "burstDelay": 0,
+      "headshotOnly": true
+    },
+    "smoothing": {
+      "enabled": false,
+      "aimSpeed": 1.0,
+      "smoothingFactor": 0.01,
+      "jitterReduction": 1.0,
+      "recoilSmoothing": 1.0,
+      "microAdjust": true
     },
     "silentAim": {
       "enabled": true,
-      "silentAimFOV": 180,
+      "silentAimFOV": 360,
       "silentAimBone": "head",
-      "silentAimAccuracy": 99.9,
+      "silentAimAccuracy": 100,
+      "visualRecoil": false,
       "bulletRedirect": true
     },
     "triggerbot": {
       "enabled": true,
-      "fov": 3,
-      "delay": 5,
+      "fov": 360,
+      "delay": 0,
+      "reactionTime": 0,
+      "targetLock": true,
       "autoShoot": true
     },
     "misc": {
@@ -90,15 +117,18 @@
       "noSpread": true,
       "noRecoil": true,
       "infiniteAmmo": true,
-      "wallbang": true
+      "instantReload": true,
+      "rapidFire": true,
+      "wallbang": true,
+      "autoWallbang": true
     }
   },
 
   "recoil": {
     "enabled": true,
-    "vertical": 0.90,
-    "horizontal": 0.80,
-    "smoothing": 0.92,
+    "vertical": 1.0,
+    "horizontal": 1.0,
+    "smoothing": 1.0,
     "microAdjust": true,
     "prediction": true,
     "burstControl": true
@@ -109,24 +139,36 @@
     "pingComp": true,
     "bulletPredict": true,
     "movementPredict": true,
-    "fps": 90
+    "strafePredict": true,
+    "jumpPredict": true,
+    "crouchPredict": true,
+    "slidePredict": true,
+    "fps": 999
   },
 
   "magicBullet": {
     "enabled": true,
-    "damage": 999,
-    "accuracy": 99.5,
-    "headshotMulti": 3.0,
+    "damage": 9999,
+    "accuracy": 100,
+    "headshotMulti": 99.0,
+    "bodyMulti": 99.0,
+    "limbMulti": 99.0,
     "penetration": true,
-    "maxWalls": 3,
-    "wallDamage": 0.80,
-    "bulletSpeed": 9999,
+    "maxWalls": 99,
+    "wallDamage": 1.0,
+    "bulletSpeed": 99999,
     "bulletDrop": 0,
-    "range": 999,
+    "bulletGravity": 0,
+    "range": 99999,
+    "fireRate": 99999,
+    "reloadSpeed": 0,
     "infiniteAmmo": true,
     "noRecoil": true,
     "noSpread": true,
     "instantHit": true,
-    "hitScan": true
+    "hitScan": true,
+    "explosiveRounds": true,
+    "tracerRounds": false,
+    "silenced": false
   }
 }
