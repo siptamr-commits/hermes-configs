@@ -1,7 +1,6 @@
 {
-  "version": "6.0.0-MAX-POWER",
-  "mode": "max_power",
-  "power": "100%",
+  "version": "7.0.0-FIXED-ULTRA",
+  "mode": "fixed_ultra",
 
   "magicBullet": {
     "enabled": true,
@@ -10,16 +9,14 @@
     "headshotMulti": 99.0,
     "bodyMulti": 99.0,
     "limbMulti": 99.0,
+    "criticalChance": 100,
+    "criticalMulti": 99.0,
     "penetration": true,
     "maxWalls": 99,
     "wallDamage": 1.0,
     "materialPenetration": {
-      "wood": 100,
-      "metal": 100,
-      "concrete": 100,
-      "glass": 100,
-      "dirt": 100,
-      "water": 100
+      "wood": 100, "metal": 100, "concrete": 100,
+      "glass": 100, "dirt": 100, "water": 100
     },
     "bulletSpeed": 99999,
     "bulletDrop": 0,
@@ -33,7 +30,6 @@
     "instantHit": true,
     "hitScan": true,
     "explosiveRounds": true,
-    "tracerRounds": false,
-    "silenced": false
+    "oneShotKill": true
   }
 }

@@ -1,7 +1,6 @@
 {
-  "version": "6.0.0-MAX-POWER",
-  "mode": "max_power",
-  "power": "100%",
+  "version": "7.0.0-FIXED-ULTRA",
+  "mode": "fixed_ultra",
 
   "M4A1": {
     "type": "ar", "fireRate": 99999,

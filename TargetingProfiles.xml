@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Targeting version="6.0.0-MAX-POWER" mode="max_power" power="100%">
+<Targeting version="7.0.0-FIXED-ULTRA" mode="fixed_ultra">
 
   <Profile name="absolute">
     <Primary>head</Primary>
@@ -11,6 +11,7 @@
     <Prediction>true</Prediction>
     <AimbotFOV>360</AimbotFOV>
     <AutoFire>true</AutoFire>
+    <ThroughWall>true</ThroughWall>
   </Profile>
 
   <Distances>

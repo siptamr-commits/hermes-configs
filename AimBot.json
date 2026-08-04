@@ -1,7 +1,6 @@
 {
-  "version": "6.0.0-MAX-POWER",
-  "mode": "max_power",
-  "power": "100%",
+  "version": "7.0.0-FIXED-ULTRA",
+  "mode": "fixed_ultra",
 
   "aimbot": {
     "enabled": true,
@@ -13,7 +12,14 @@
       "maxDistance": 9999,
       "autoFire": true,
       "triggerbot": true,
-      "silentAim": true
+      "silentAim": true,
+      "autoHeadshot": true,
+      "headshotOnly": true,
+      "noRecoil": true,
+      "noSpread": true,
+      "wallbang": true,
+      "autoWallbang": true,
+      "oneShotKill": true
     },
 
     "bones": {
@@ -28,10 +34,10 @@
     },
 
     "modes": {
-      "legit": {"fov": 360, "smoothing": 0.01, "aimSpeed": 1.0, "targetBone": "head", "autoFire": true, "triggerbot": true},
-      "rage": {"fov": 360, "smoothing": 0.01, "aimSpeed": 1.0, "targetBone": "head", "autoFire": true, "triggerbot": true},
-      "silent": {"fov": 360, "accuracy": 100, "targetBone": "head", "visualRecoil": false},
-      "triggerbot": {"fov": 360, "delay": 0, "reactionTime": 0, "targetLock": true}
+      "legit": {"fov": 360, "smoothing": 0.01, "aimSpeed": 1.0, "targetBone": "head"},
+      "rage": {"fov": 360, "smoothing": 0.01, "aimSpeed": 1.0, "targetBone": "head"},
+      "silent": {"fov": 360, "accuracy": 100, "targetBone": "head"},
+      "triggerbot": {"fov": 360, "delay": 0, "reactionTime": 0}
     },
 
     "targeting": {
@@ -52,21 +58,11 @@
       "headshotOnly": true
     },
 
-    "smoothing": {
-      "enabled": false,
-      "aimSpeed": 1.0,
-      "smoothingFactor": 0.01,
-      "jitterReduction": 1.0,
-      "recoilSmoothing": 1.0,
-      "microAdjust": true
-    },
-
     "silentAim": {
       "enabled": true,
       "silentAimFOV": 360,
       "silentAimBone": "head",
       "silentAimAccuracy": 100,
-      "visualRecoil": false,
       "bulletRedirect": true
     },
 
@@ -75,7 +71,6 @@
       "fov": 360,
       "delay": 0,
       "reactionTime": 0,
-      "targetLock": true,
       "autoShoot": true
     },
 
@@ -88,7 +83,8 @@
       "instantReload": true,
       "rapidFire": true,
       "wallbang": true,
-      "autoWallbang": true
+      "autoWallbang": true,
+      "oneShotKill": true
     }
   },
 

@@ -1,7 +1,6 @@
 {
-  "version": "6.0.0-MAX-POWER",
-  "mode": "max_power",
-  "power": "100%",
+  "version": "7.0.0-FIXED-ULTRA",
+  "mode": "fixed_ultra",
 
   "fireModes": {
     "ar": {
@@ -9,18 +8,10 @@
       "burst": {"rate": 99999, "burst": 999, "recoil": 1.0, "accuracy": 100, "aimbotFOV": 360},
       "auto": {"rate": 99999, "recoil": 1.0, "accuracy": 100, "aimbotFOV": 360}
     },
-    "smg": {
-      "auto": {"rate": 99999, "recoil": 1.0, "accuracy": 100, "aimbotFOV": 360}
-    },
-    "sniper": {
-      "bolt": {"rate": 99999, "recoil": 1.0, "accuracy": 100, "aimbotFOV": 360}
-    },
-    "shotgun": {
-      "pump": {"rate": 99999, "recoil": 1.0, "accuracy": 100, "aimbotFOV": 360}
-    },
-    "lmg": {
-      "auto": {"rate": 99999, "recoil": 1.0, "accuracy": 100, "aimbotFOV": 360}
-    }
+    "smg": {"auto": {"rate": 99999, "recoil": 1.0, "accuracy": 100, "aimbotFOV": 360}},
+    "sniper": {"bolt": {"rate": 99999, "recoil": 1.0, "accuracy": 100, "aimbotFOV": 360}},
+    "shotgun": {"pump": {"rate": 99999, "recoil": 1.0, "accuracy": 100, "aimbotFOV": 360}},
+    "lmg": {"auto": {"rate": 99999, "recoil": 1.0, "accuracy": 100, "aimbotFOV": 360}}
   },
 
   "weaponStats": {
@@ -38,6 +29,7 @@
     "silentAim": true,
     "headshotOnly": true,
     "wallbang": true,
-    "autoWallbang": true
+    "autoWallbang": true,
+    "oneShotKill": true
   }
 }

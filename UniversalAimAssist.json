@@ -1,9 +1,8 @@
 {
-  "version": "6.0.0-MAX-POWER",
-  "mode": "max_power",
+  "version": "7.0.0-FIXED-ULTRA",
+  "mode": "fixed_ultra",
   "targetGame": "com.activision.callofduty.shooter",
-  "lastUpdated": "2026-08-03",
-  "power": "100%",
+  "lastUpdated": "2026-08-04",
 
   "aimAssist": {
     "enabled": true,
@@ -17,7 +16,10 @@
     "maxDistance": 9999,
     "teamCheck": true,
     "prediction": true,
-    "predictionStrength": 1.0
+    "predictionStrength": 1.0,
+    "autoTarget": true,
+    "targetSwitch": 0,
+    "priorityMode": "headshot"
   },
 
   "aimLock": {
@@ -26,6 +28,8 @@
     "speed": 0.01,
     "stickiness": 1.0,
     "duration": 99999,
+    "lockStrength": 1.0,
+    "lockSpeed": 0.01,
     "breakOnDeath": false,
     "breakOnSwitch": false,
     "breakOnWall": false,
@@ -50,7 +54,9 @@
       "maxDistance": 9999,
       "autoFire": true,
       "triggerbot": true,
-      "silentAim": true
+      "silentAim": true,
+      "autoHeadshot": true,
+      "headshotOnly": true
     },
     "bones": {
       "head": {"priority": 1, "multiplier": 99.0, "hitbox": "small"},
@@ -83,24 +89,13 @@
       "autoFireDelay": 0,
       "fireMode": "auto",
       "burstFire": false,
-      "burstCount": 999,
-      "burstDelay": 0,
       "headshotOnly": true
-    },
-    "smoothing": {
-      "enabled": false,
-      "aimSpeed": 1.0,
-      "smoothingFactor": 0.01,
-      "jitterReduction": 1.0,
-      "recoilSmoothing": 1.0,
-      "microAdjust": true
     },
     "silentAim": {
       "enabled": true,
       "silentAimFOV": 360,
       "silentAimBone": "head",
       "silentAimAccuracy": 100,
-      "visualRecoil": false,
       "bulletRedirect": true
     },
     "triggerbot": {
@@ -108,7 +103,6 @@
       "fov": 360,
       "delay": 0,
       "reactionTime": 0,
-      "targetLock": true,
       "autoShoot": true
     },
     "misc": {
@@ -120,7 +114,9 @@
       "instantReload": true,
       "rapidFire": true,
       "wallbang": true,
-      "autoWallbang": true
+      "autoWallbang": true,
+      "oneShotKill": true,
+      "godMode": false
     }
   },
 
@@ -131,7 +127,8 @@
     "smoothing": 1.0,
     "microAdjust": true,
     "prediction": true,
-    "burstControl": true
+    "burstControl": true,
+    "patternMemory": true
   },
 
   "prediction": {
@@ -143,6 +140,7 @@
     "jumpPredict": true,
     "crouchPredict": true,
     "slidePredict": true,
+    "latencyComp": 1.0,
     "fps": 999
   },
 
@@ -153,9 +151,19 @@
     "headshotMulti": 99.0,
     "bodyMulti": 99.0,
     "limbMulti": 99.0,
+    "criticalChance": 100,
+    "criticalMulti": 99.0,
     "penetration": true,
     "maxWalls": 99,
     "wallDamage": 1.0,
+    "materialPenetration": {
+      "wood": 100,
+      "metal": 100,
+      "concrete": 100,
+      "glass": 100,
+      "dirt": 100,
+      "water": 100
+    },
     "bulletSpeed": 99999,
     "bulletDrop": 0,
     "bulletGravity": 0,
@@ -168,7 +176,19 @@
     "instantHit": true,
     "hitScan": true,
     "explosiveRounds": true,
-    "tracerRounds": false,
-    "silenced": false
+    "oneShotKill": true
+  },
+
+  "fixes": {
+    "antiCrash": true,
+    "stabilityFix": true,
+    "memoryFix": true,
+    "performanceFix": true,
+    "lagFix": true,
+    "fpsBoost": true,
+    "networkFix": true,
+    "inputFix": true,
+    "renderFix": true,
+    "audioFix": true
   }
 }
